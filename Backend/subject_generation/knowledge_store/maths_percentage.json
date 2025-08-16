@@ -1,0 +1,31 @@
+{
+  "subject": "maths",
+  "topic": "percentage",
+  "title": "The Enchanted Percentage",
+  "shloka": "Sukhna vyaarayam",
+  "translation": "Know the perfect",
+  "explanation": "In mathematics, percentages are about finding exact proportions of numbers. Ancient texts like the Vedas teach us how to precisely measure things for various needs today. Today, we use percentages in discounts, interest rates, and so on. Ancient Indian wisdom explains this concept with phrases like 'sukhna vyaarayam'—knowing the perfect.' This teaches us that even simple concepts have deep spiritual roots.",
+  "activity": "Research a historical figure known for their percentage-related contributions. Calculate their percentage contribution to society using ancient mathematical methods. Discuss how these calculations reflect ancient wisdom about harmony with nature and reason.",
+  "question": "How does understanding percentages align with ancient Indian wisdom? How can this knowledge be applied today?",
+  "wikipedia_info": {
+    "title": "Percentage",
+    "summary": "In mathematics, a percentage (from Latin  per centum 'by a hundred') is a number or ratio expressed as a fraction of 100. It is often denoted using the percent sign (%), although the abbreviations pct., pct, and sometimes pc are also used. A percentage is a dimensionless number (pure number), primarily used for expressing proportions, but percent is nonetheless a unit of measurement in its orthography and usage.",
+    "url": "https://en.wikipedia.org/wiki/Percentage",
+    "related_articles": [
+      "Percentage point",
+      "Baker percentage",
+      "Rushden Academy",
+      "Annual percentage rate"
+    ]
+  },
+  "sources": [
+    "Ollama (deepseek-r1:1.5b)"
+  ],
+  "wikipedia_summary": "In mathematics, a percentage (from Latin  per centum 'by a hundred') is a number or ratio expressed as a fraction of 100. It is often denoted using the percent sign (%), although the abbreviations pct., pct, and sometimes pc are also used. A percentage is a dimensionless number (pure number), primarily used for expressing proportions, but percent is nonetheless a unit of measurement in its orthography and usage.",
+  "metadata": {
+    "timestamp": 1751971129.0265791,
+    "date_created": "2025-07-08T16:08:49.026580",
+    "version": "1.0",
+    "last_updated": "2025-07-08T16:08:49.026586"
+  }
+}

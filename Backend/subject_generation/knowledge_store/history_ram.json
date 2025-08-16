@@ -1,0 +1,20 @@
+{
+  "subject": "history",
+  "topic": "Ram",
+  "title": "The title of the lesson",
+  "shloka": "Mudita, muni, dharana, dhalas",
+  "translation": "The wheel is made of muda, manna, dharana, and dhalas.",
+  "explanation": "Ram is a central concept in ancient Indian wisdom traditions. It represents the Guardian of History, guiding individuals to understand the order of the universe and maintain harmony. Ram is deeply rooted in Vedic philosophy, emphasizing the importance of mental discipline and emotional balance. In Ayurveda, Ram is seen as a holistic principle for maintaining wellness and spiritual well-being. Its principles also extend into modern life, fostering personal growth and achieving meaningful goals.",
+  "activity": "Create an avatar using four colors: Wood (for wood shanas), Fire (for fire shanas), Earth (for earth shanas), and Water (for water shanas). This will help visualize the harmony required for peace.",
+  "question": "How do you observe your surroundings for signs of balance? Do they resemble the universe's order, or do you see harmony within?",
+  "wikipedia_info": null,
+  "sources": [
+    "Ollama (deepseek-r1:1.5b)"
+  ],
+  "metadata": {
+    "timestamp": 1751972131.5211403,
+    "date_created": "2025-07-08T16:25:31.521142",
+    "version": "1.0",
+    "last_updated": "2025-07-08T16:25:31.521149"
+  }
+}

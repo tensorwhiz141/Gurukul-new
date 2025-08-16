@@ -1,0 +1,48 @@
+[
+  {
+    "task_id": "f7f940e9-4c17-46bf-9c01-bfef02ea6dd1",
+    "task_type": "financial_simulation",
+    "status": "completed",
+    "total_time": 0.0004241466522216797,
+    "poll_count": 1,
+    "status_history": [
+      {
+        "poll_count": 1,
+        "elapsed_time": 0.0004241466522216797,
+        "status": "success",
+        "timestamp": "2025-06-24T14:55:45.675648",
+        "response_time": 2.043144
+      }
+    ],
+    "results_available": true,
+    "results_data": {
+      "status": "success",
+      "ready": false,
+      "message": "No simulation results available yet.",
+      "task_id": "f7f940e9-4c17-46bf-9c01-bfef02ea6dd1",
+      "task_status": "queued",
+      "user_id": "high-latency-financial-test",
+      "data": {
+        "simulated_cashflow": [],
+        "discipline_report": [],
+        "goal_status": [],
+        "behavior_tracker": [],
+        "karmic_tracker": [],
+        "financial_strategy": [],
+        "person_history": [],
+        "monthly_reflections": []
+      },
+      "source": "mongodb"
+    }
+  },
+  {
+    "scenario": "Invalid Financial Simulator Port",
+    "status": "connection_refused",
+    "response_time": 4.107737064361572
+  },
+  {
+    "scenario": "Invalid Lesson Generator Port",
+    "status": "connection_refused",
+    "response_time": 4.094969749450684
+  }
+]

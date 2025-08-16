@@ -1,0 +1,148 @@
+/* About page specific styles */
+.about-container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1400px;
+  overflow: visible;
+}
+
+.about-title {
+  font-family: "Nunito", sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+.about-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, #FF9933, #FFD700);
+  transition: width 0.8s ease;
+}
+
+.about-title.animate::after {
+  width: 100%;
+}
+
+.about-section {
+  margin: 3rem 0;
+  position: relative;
+  overflow: visible;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 153, 51, 0),
+    rgba(255, 153, 51, 0.5),
+    rgba(255, 215, 0, 0.5),
+    rgba(255, 153, 51, 0)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-card:hover::before {
+  opacity: 1;
+}
+
+.about-card-title {
+  color: #FF9933;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.about-card-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(to right, #FF9933, #FFD700);
+}
+
+.about-card-content {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.about-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #FF9933;
+}
+
+.about-quote {
+  font-style: italic;
+  position: relative;
+  padding-left: 2rem;
+  border-left: 3px solid rgba(255, 153, 51, 0.5);
+  margin: 2rem 0;
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-timeline {
+  position: relative;
+  margin: 3rem 0;
+}
+
+.about-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(255, 153, 51, 0.2), rgba(255, 153, 51, 0.8), rgba(255, 153, 51, 0.2));
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-timeline::before {
+    left: 20px;
+  }
+}

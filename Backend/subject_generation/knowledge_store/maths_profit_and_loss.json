@@ -1,0 +1,31 @@
+{
+  "subject": "maths",
+  "topic": "profit and loss",
+  "title": "Understanding profit and loss in maths",
+  "shloka": "ॐ सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः। सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत्॥",
+  "translation": "May all be happy, may all be free from disease, may all see auspiciousness, may none suffer.",
+  "explanation": "According to Wikipedia: In mathematical optimization and decision theory, a loss function or cost function (sometimes also called an error function) is a function that maps an event or values of one or more variables onto a real number intuitively representing some \"cost\" associated with the event. An optimization problem seeks to minimize a loss function. An objective function is either a loss function or its opposite (in specific domains, variously called a reward function, a profit function, a utility function, a fitness function, etc.), in which case it is to be maximized. The loss function could include terms from several levels of the hierarchy.\nIn statistics, typically a  loss function is used for parameter estimation, and the event in question is some function of the difference between estimated and true values for an instance of data. The concept, as old as Laplace, was reintroduced in statistics by Abraham Wald in the middle of the 20th century.  In the context of economics, for example, this is usually economic cost or regret.  In classification, it is the penalty for an incorrect classification of an example. In actuarial science, it is used in an insurance context to model benefits paid over premiums, particularly since the works of Harald Cramér in the 1920s. In optimal control, the loss is the penalty for failing to achieve a desired value. In financial risk management, the function is mapped to a monetary loss.\n\nThis topic is significant in maths because it represents an important aspect of ancient Indian knowledge systems. The study of profit and loss in the context of maths provides valuable insights into how ancient wisdom can inform modern understanding.",
+  "activity": "Research the relationship between maths and profit and loss using both traditional sources and modern scientific understanding. Compare and contrast the approaches.",
+  "question": "How does the understanding of profit and loss in maths complement or challenge modern perspectives?",
+  "wikipedia_info": {
+    "title": "Loss function",
+    "summary": "In mathematical optimization and decision theory, a loss function or cost function (sometimes also called an error function) is a function that maps an event or values of one or more variables onto a real number intuitively representing some \"cost\" associated with the event. An optimization problem seeks to minimize a loss function. An objective function is either a loss function or its opposite (in specific domains, variously called a reward function, a profit function, a utility function, a fitness function, etc.), in which case it is to be maximized. The loss function could include terms from several levels of the hierarchy.\nIn statistics, typically a  loss function is used for parameter estimation, and the event in question is some function of the difference between estimated and true values for an instance of data. The concept, as old as Laplace, was reintroduced in statistics by Abraham Wald in the middle of the 20th century.  In the context of economics, for example, this is usually economic cost or regret.  In classification, it is the penalty for an incorrect classification of an example. In actuarial science, it is used in an insurance context to model benefits paid over premiums, particularly since the works of Harald Cramér in the 1920s. In optimal control, the loss is the penalty for failing to achieve a desired value. In financial risk management, the function is mapped to a monetary loss.",
+    "url": "https://en.wikipedia.org/wiki/Loss_function",
+    "related_articles": [
+      "Edexcel",
+      "Profit model",
+      "OpenAI",
+      "2024 Wayanad landslides"
+    ]
+  },
+  "sources": [
+    "Wikipedia"
+  ],
+  "wikipedia_summary": "In mathematical optimization and decision theory, a loss function or cost function (sometimes also called an error function) is a function that maps an event or values of one or more variables onto a real number intuitively representing some \"cost\" associated with the event. An optimization problem seeks to minimize a loss function. An objective function is either a loss function or its opposite (in specific domains, variously called a reward function, a profit function, a utility function, a...",
+  "metadata": {
+    "timestamp": 1751702673.294666,
+    "date_created": "2025-07-05T13:34:33.294667",
+    "version": "1.0",
+    "last_updated": "2025-07-05T13:34:33.294673"
+  }
+}

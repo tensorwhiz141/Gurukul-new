@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming TTS Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        .test-section h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .status {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .status.info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .audio-controls {
+            margin: 10px 0;
+        }
+        audio {
+            width: 100%;
+            margin: 10px 0;
+        }
+        .log {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔊 Streaming TTS Implementation Test</h1>
+        <p>This page tests the new streaming TTS implementation that eliminates audio file saving.</p>
+
+        <div class="test-section">
+            <h3>📱 Dedicated Chatbot Service Streaming Test</h3>
+            <textarea id="chatbotText" placeholder="Enter text to convert to speech using the dedicated chatbot service...">Hello! This is a test of the streaming TTS implementation using the dedicated chatbot service. No files should be saved to disk.</textarea>
+            <br>
+            <button onclick="testChatbotStreaming()">🎵 Test Chatbot Streaming TTS</button>
+            <button onclick="stopAudio()">⏹️ Stop Audio</button>
+            <div id="chatbotStatus" class="status" style="display: none;"></div>
+            <div class="audio-controls">
+                <audio id="chatbotAudio" controls style="display: none;"></audio>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>🎙️ Regular TTS Service Streaming Test</h3>
+            <textarea id="regularText" placeholder="Enter text to convert to speech using the regular TTS service...">Hello! This is a test of the streaming TTS implementation using the regular TTS service. Audio should be streamed directly without file storage.</textarea>
+            <br>
+            <button onclick="testRegularStreaming()">🎵 Test Regular Streaming TTS</button>
+            <button onclick="stopAudio()">⏹️ Stop Audio</button>
+            <div id="regularStatus" class="status" style="display: none;"></div>
+            <div class="audio-controls">
+                <audio id="regularAudio" controls style="display: none;"></audio>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>📊 Test Results</h3>
+            <div id="testResults" class="log"></div>
+        </div>
+    </div>
+
+    <script>
+        const CHATBOT_TTS_URL = 'http://localhost:8001';
+        const REGULAR_TTS_URL = 'http://localhost:8007';
+        
+        let currentAudio = null;
+        
+        function log(message) {
+            const resultsDiv = document.getElementById('testResults');
+            const timestamp = new Date().toLocaleTimeString();
+            resultsDiv.innerHTML += `[${timestamp}] ${message}\n`;
+            resultsDiv.scrollTop = resultsDiv.scrollHeight;
+            console.log(message);
+        }
+        
+        function showStatus(elementId, message, type = 'info') {
+            const statusDiv = document.getElementById(elementId);
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${type}`;
+            statusDiv.style.display = 'block';
+        }
+        
+        function hideStatus(elementId) {
+            document.getElementById(elementId).style.display = 'none';
+        }
+        
+        function stopAudio() {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio = null;
+                log('🛑 Audio playback stopped');
+            }
+        }
+        
+        async function testChatbotStreaming() {
+            const text = document.getElementById('chatbotText').value.trim();
+            if (!text) {
+                showStatus('chatbotStatus', 'Please enter some text', 'error');
+                return;
+            }
+            
+            showStatus('chatbotStatus', 'Generating streaming audio...', 'info');
+            log('🔊 Testing Chatbot Streaming TTS...');
+            
+            try {
+                const startTime = Date.now();
+                
+                const response = await fetch(`${CHATBOT_TTS_URL}/tts/stream`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ text: text })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const audioBlob = await response.blob();
+                const audioUrl = URL.createObjectURL(audioBlob);
+                const responseTime = Date.now() - startTime;
+                
+                log(`✅ Chatbot streaming successful! (${responseTime}ms, ${audioBlob.size} bytes)`);
+                showStatus('chatbotStatus', `Audio generated successfully! (${audioBlob.size} bytes)`, 'success');
+                
+                // Play the audio
+                const audioElement = document.getElementById('chatbotAudio');
+                audioElement.src = audioUrl;
+                audioElement.style.display = 'block';
+                currentAudio = audioElement;
+                
+                audioElement.onended = () => {
+                    URL.revokeObjectURL(audioUrl);
+                    log('🧹 Blob URL cleaned up after playback');
+                };
+                
+                audioElement.play();
+                
+            } catch (error) {
+                log(`❌ Chatbot streaming failed: ${error.message}`);
+                showStatus('chatbotStatus', `Error: ${error.message}`, 'error');
+            }
+        }
+        
+        async function testRegularStreaming() {
+            const text = document.getElementById('regularText').value.trim();
+            if (!text) {
+                showStatus('regularStatus', 'Please enter some text', 'error');
+                return;
+            }
+            
+            showStatus('regularStatus', 'Generating streaming audio...', 'info');
+            log('🔊 Testing Regular TTS Streaming...');
+            
+            try {
+                const startTime = Date.now();
+                
+                const formData = new FormData();
+                formData.append('text', text);
+                
+                const response = await fetch(`${REGULAR_TTS_URL}/api/generate/stream`, {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const audioBlob = await response.blob();
+                const audioUrl = URL.createObjectURL(audioBlob);
+                const responseTime = Date.now() - startTime;
+                
+                log(`✅ Regular TTS streaming successful! (${responseTime}ms, ${audioBlob.size} bytes)`);
+                showStatus('regularStatus', `Audio generated successfully! (${audioBlob.size} bytes)`, 'success');
+                
+                // Play the audio
+                const audioElement = document.getElementById('regularAudio');
+                audioElement.src = audioUrl;
+                audioElement.style.display = 'block';
+                currentAudio = audioElement;
+                
+                audioElement.onended = () => {
+                    URL.revokeObjectURL(audioUrl);
+                    log('🧹 Blob URL cleaned up after playback');
+                };
+                
+                audioElement.play();
+                
+            } catch (error) {
+                log(`❌ Regular TTS streaming failed: ${error.message}`);
+                showStatus('regularStatus', `Error: ${error.message}`, 'error');
+            }
+        }
+        
+        // Initialize
+        log('🚀 Streaming TTS Test Page Loaded');
+        log('📝 Ready to test streaming TTS implementation');
+    </script>
+</body>
+</html>

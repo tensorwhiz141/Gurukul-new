@@ -1,0 +1,352 @@
+{
+  "sentiment_rules": {
+    "score_based": {
+      "excellent": {
+        "threshold": 85,
+        "sentiment": "positive",
+        "tone": "congratulatory",
+        "description": {
+          "en": "excellent progress",
+          "hi": "उत्कृष्ट प्रगति",
+          "bn": "চমৎকার অগ্রগতি",
+          "gu": "ઉત્કૃષ્ટ પ્રગતિ",
+          "mr": "उत्कृष्ट प्रगती",
+          "ta": "சிறந்த முன்னேற்றம்",
+          "te": "అద్భుతమైన పురోగతి",
+          "kn": "ಅತ್ಯುತ್ತಮ ಪ್ರಗತಿ"
+        }
+      },
+      "good": {
+        "threshold": 70,
+        "sentiment": "positive",
+        "tone": "encouraging",
+        "description": {
+          "en": "good progress",
+          "hi": "अच्छी प्रगति",
+          "bn": "ভাল অগ্রগতি",
+          "gu": "સારી પ્રગતિ",
+          "mr": "चांगली प्रगती",
+          "ta": "நல்ல முன்னேற்றம்",
+          "te": "మంచి పురోగతి",
+          "kn": "ಉತ್ತಮ ಪ್ರಗತಿ"
+        }
+      },
+      "average": {
+        "threshold": 50,
+        "sentiment": "neutral",
+        "tone": "gentle",
+        "description": {
+          "en": "steady progress",
+          "hi": "स्थिर प्रगति",
+          "bn": "স্থিতিশীল অগ্রগতি",
+          "gu": "સ્થિર પ્રગતિ",
+          "mr": "स्थिर प्रगती",
+          "ta": "நிலையான முன்னேற்றம்",
+          "te": "స్థిరమైన పురోగతి",
+          "kn": "ಸ್ಥಿರ ಪ್ರಗತಿ"
+        }
+      },
+      "below_average": {
+        "threshold": 30,
+        "sentiment": "concerned",
+        "tone": "supportive",
+        "description": {
+          "en": "concerning trends",
+          "hi": "चिंताजनक रुझान",
+          "bn": "উদ্বেগজনক প্রবণতা",
+          "gu": "ચિંતાજનક વલણો",
+          "mr": "चिंताजनक प्रवृत्ती",
+          "ta": "கவலைக்குரிய போக்குகள்",
+          "te": "ఆందోళనకరమైన ధోరణులు",
+          "kn": "ಕಳವಳಕಾರಿ ಪ್ರವೃತ್ತಿಗಳು"
+        }
+      },
+      "poor": {
+        "threshold": 0,
+        "sentiment": "concerned",
+        "tone": "alert",
+        "description": {
+          "en": "significant challenges",
+          "hi": "महत्वपूर्ण चुनौतियां",
+          "bn": "উল্লেখযোগ্য চ্যালেঞ্জ",
+          "gu": "મહત્વપૂર્ણ પડકારો",
+          "mr": "महत्त्वपूर्ण आव्हाने",
+          "ta": "குறிப்பிடத்தக்க சவால்கள்",
+          "te": "ముఖ్యమైన సవాళ్లు",
+          "kn": "ಗಮನಾರ್ಹ ಸವಾಲುಗಳು"
+        }
+      }
+    },
+    "risk_based": {
+      "low": {
+        "sentiment": "positive",
+        "tone": "congratulatory",
+        "nudge_urgency": "low"
+      },
+      "medium": {
+        "sentiment": "neutral",
+        "tone": "gentle",
+        "nudge_urgency": "medium"
+      },
+      "high": {
+        "sentiment": "concerned",
+        "tone": "alert",
+        "nudge_urgency": "high"
+      }
+    },
+    "engagement_based": {
+      "high_engagement": {
+        "threshold": 80,
+        "sentiment": "positive",
+        "tone": "encouraging"
+      },
+      "medium_engagement": {
+        "threshold": 50,
+        "sentiment": "neutral",
+        "tone": "gentle"
+      },
+      "low_engagement": {
+        "threshold": 0,
+        "sentiment": "concerned",
+        "tone": "supportive"
+      }
+    }
+  },
+  "nudge_thresholds": {
+    "edumentor": {
+      "missed_quizzes": {
+        "threshold": 2,
+        "urgency": "medium"
+      },
+      "low_engagement": {
+        "threshold": 30,
+        "urgency": "high"
+      },
+      "streak_break": {
+        "threshold": 1,
+        "urgency": "low"
+      },
+      "poor_performance": {
+        "threshold": 40,
+        "urgency": "high"
+      }
+    },
+    "wellness": {
+      "financial": {
+        "overspending": {
+          "threshold": 110,
+          "urgency": "high"
+        },
+        "low_savings": {
+          "threshold": 5,
+          "urgency": "medium"
+        },
+        "bill_due": {
+          "threshold": 3,
+          "urgency": "high"
+        }
+      },
+      "emotional": {
+        "stress_spike": {
+          "threshold": 75,
+          "urgency": "high"
+        },
+        "low_activity": {
+          "threshold": 20,
+          "urgency": "medium"
+        },
+        "social_isolation": {
+          "threshold": 7,
+          "urgency": "medium"
+        }
+      }
+    }
+  },
+  "tone_mappings": {
+    "congratulatory": {
+      "en": {
+        "prefix": "🎉 Fantastic! ",
+        "style": "enthusiastic",
+        "emoji": "🌟"
+      },
+      "hi": {
+        "prefix": "🎉 शानदार! ",
+        "style": "enthusiastic",
+        "emoji": "🌟"
+      },
+      "bn": {
+        "prefix": "🎉 চমৎকার! ",
+        "style": "enthusiastic",
+        "emoji": "🌟"
+      },
+      "gu": {
+        "prefix": "🎉 અદ્ભુત! ",
+        "style": "enthusiastic",
+        "emoji": "🌟"
+      },
+      "mr": {
+        "prefix": "🎉 अप्रतिम! ",
+        "style": "enthusiastic",
+        "emoji": "🌟"
+      },
+      "ta": {
+        "prefix": "🎉 அருமை! ",
+        "style": "enthusiastic",
+        "emoji": "🌟"
+      },
+      "te": {
+        "prefix": "🎉 అద్భుతం! ",
+        "style": "enthusiastic",
+        "emoji": "🌟"
+      },
+      "kn": {
+        "prefix": "🎉 ಅದ್ಭುತ! ",
+        "style": "enthusiastic",
+        "emoji": "🌟"
+      }
+    },
+    "encouraging": {
+      "en": {
+        "prefix": "👍 Great work! ",
+        "style": "positive",
+        "emoji": "💪"
+      },
+      "hi": {
+        "prefix": "👍 बेहतरीन काम! ",
+        "style": "positive",
+        "emoji": "💪"
+      },
+      "bn": {
+        "prefix": "👍 দুর্দান্ত কাজ! ",
+        "style": "positive",
+        "emoji": "💪"
+      },
+      "gu": {
+        "prefix": "👍 શાનદાર કામ! ",
+        "style": "positive",
+        "emoji": "💪"
+      },
+      "mr": {
+        "prefix": "👍 उत्कृष्ट काम! ",
+        "style": "positive",
+        "emoji": "💪"
+      },
+      "ta": {
+        "prefix": "👍 சிறந்த வேலை! ",
+        "style": "positive",
+        "emoji": "💪"
+      },
+      "te": {
+        "prefix": "👍 గొప్ప పని! ",
+        "style": "positive",
+        "emoji": "💪"
+      },
+      "kn": {
+        "prefix": "👍 ಅದ್ಭುತ ಕೆಲಸ! ",
+        "style": "positive",
+        "emoji": "💪"
+      }
+    },
+    "gentle": {
+      "en": {
+        "prefix": "💡 ",
+        "style": "neutral",
+        "emoji": "🤝"
+      },
+      "hi": {
+        "prefix": "💡 ",
+        "style": "neutral",
+        "emoji": "🤝"
+      },
+      "bn": {
+        "prefix": "💡 ",
+        "style": "neutral",
+        "emoji": "🤝"
+      }
+    },
+    "supportive": {
+      "en": {
+        "prefix": "🤗 We're here to help. ",
+        "style": "caring",
+        "emoji": "💙"
+      },
+      "hi": {
+        "prefix": "🤗 हम मदद के लिए यहाँ हैं। ",
+        "style": "caring",
+        "emoji": "💙"
+      },
+      "bn": {
+        "prefix": "🤗 আমরা সাহায্যের জন্য এখানে আছি। ",
+        "style": "caring",
+        "emoji": "💙"
+      },
+      "gu": {
+        "prefix": "🤗 અમે મદદ માટે અહીં છીએ. ",
+        "style": "caring",
+        "emoji": "💙"
+      },
+      "mr": {
+        "prefix": "🤗 आम्ही मदतीसाठी येथे आहोत. ",
+        "style": "caring",
+        "emoji": "💙"
+      },
+      "ta": {
+        "prefix": "🤗 நாங்கள் உதவ இங்கே இருக்கிறோம். ",
+        "style": "caring",
+        "emoji": "💙"
+      },
+      "te": {
+        "prefix": "🤗 మేము సహాయం చేయడానికి ఇక్కడ ఉన్నాము. ",
+        "style": "caring",
+        "emoji": "💙"
+      },
+      "kn": {
+        "prefix": "🤗 ನಾವು ಸಹಾಯ ಮಾಡಲು ಇಲ್ಲಿದ್ದೇವೆ. ",
+        "style": "caring",
+        "emoji": "💙"
+      }
+    },
+    "alert": {
+      "en": {
+        "prefix": "⚠️ Important: ",
+        "style": "urgent",
+        "emoji": "🚨"
+      },
+      "hi": {
+        "prefix": "⚠️ महत्वपूर्ण: ",
+        "style": "urgent",
+        "emoji": "🚨"
+      },
+      "bn": {
+        "prefix": "⚠️ গুরুত্বপূর্ণ: ",
+        "style": "urgent",
+        "emoji": "🚨"
+      },
+      "gu": {
+        "prefix": "⚠️ મહત્વપૂર્ણ: ",
+        "style": "urgent",
+        "emoji": "🚨"
+      },
+      "mr": {
+        "prefix": "⚠️ महत्त्वपूर्ण: ",
+        "style": "urgent",
+        "emoji": "🚨"
+      },
+      "ta": {
+        "prefix": "⚠️ முக்கியம்: ",
+        "style": "urgent",
+        "emoji": "🚨"
+      },
+      "te": {
+        "prefix": "⚠️ ముఖ్యమైనది: ",
+        "style": "urgent",
+        "emoji": "🚨"
+      },
+      "kn": {
+        "prefix": "⚠️ ಮುಖ್ಯ: ",
+        "style": "urgent",
+        "emoji": "🚨"
+      }
+    }
+  }
+}

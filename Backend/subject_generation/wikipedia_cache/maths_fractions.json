@@ -1,0 +1,17 @@
+{
+  "subject": "maths",
+  "topic": "fractions",
+  "wikipedia": {
+    "title": "List of mathematical constants",
+    "summary": "A mathematical constant is a key number whose value is fixed by an unambiguous definition, often referred to by a symbol (e.g., an alphabet letter), or by mathematicians' names to facilitate using it across multiple mathematical problems. For example, the constant π may be defined as the ratio of the length of a circle's circumference to its diameter. The following list includes a decimal expansion and set containing each number, ordered by year of discovery.\nThe column headings may be clicked to sort the table alphabetically, by decimal value, or by set. Explanations of the symbols in the right hand column can be found by clicking on them.",
+    "content": "A mathematical constant is a key number whose value is fixed by an unambiguous definition, often referred to by a symbol (e.g., an alphabet letter), or by mathematicians' names to facilitate using it across multiple mathematical problems. For example, the constant π may be defined as the ratio of the length of a circle's circumference to its diameter. The following list includes a decimal expansion and set containing each number, ordered by year of discovery.\nThe column headings may be clicked to sort the table alphabetically, by decimal value, or by set. Explanations of the symbols in the right hand column can be found by clicking on them.\n\n\n== List ==\n\n\n== Mathematical constants sorted by their representations as continued fractions ==\nThe following list includes the continued fractions of some constants and is sorted by their representations. Continued fractions with more than 20 known terms have been truncated, with an ellipsis to show that they continue. Rational numbers have two continued fractions; the version in this list is the shorter one. Decimal representations are rounded or padded to 10 places if the values are known.\n\n\n== Sequences of constants ==\n\n\n== See also ==\nInvariant (mathematics)\nGlossary of mathematical symbols\nList of mathematical symbols by subject\nList of numbers\nList of physical constants\nParticular values of the Riemann zeta function\nPhysical constant\n\n\n== Notes ==\n\n\n== References ==\n\n\n=== Site MathWorld Wolfram.com ===\n\n\n=== Site OEIS.org ===\n\n\n=== Site OEIS Wiki ===\n\n\n== Bibliography ==\n\n\n== Further reading ==\nWolfram, Stephen. \"4: Systems Based on Numbers\". A New Kind of Science. Section 5: Mathematical Constants — Continued fractions.\n\n\n== External links ==\nInverse Symbolic Calculator, Plouffe's Inverter\nConstants – from Wolfram MathWorld\nOn-Line Encyclopedia of Integer Sequences (OEIS)\nSteven Finch's page of mathematical constants\nXavier Gourdon and Pascal Sebah's page of numbers, mathematical constants and algorithms",
+    "url": "https://en.wikipedia.org/wiki/List_of_mathematical_constants",
+    "related_articles": [
+      "Partial fraction decomposition",
+      "Fraction",
+      "Vedic Mathematics",
+      "Murderous Maths"
+    ]
+  },
+  "timestamp": 1751713188.9821234
+}

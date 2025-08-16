@@ -1,0 +1,24 @@
+{
+  "session_id": "test-session-cmd",
+  "timestamp": "2025-08-13T16:00:00Z",
+  "user_info": {
+    "user_id": "cmd_test_user",
+    "auth_token": "bhiv-core-key",
+    "lang": "en-IN",
+    "persona": "student",
+    "permissions": ["read", "write"]
+  },
+  "input": {
+    "raw_text": "Explain quantum computing applications",
+    "voice_enabled": false,
+    "mode": "chat"
+  },
+  "knowledgebase_query": {
+    "use_vector": true,
+    "top_k": 3
+  },
+  "llm_request": {
+    "model": "gemini",
+    "max_tokens": 512
+  }
+}

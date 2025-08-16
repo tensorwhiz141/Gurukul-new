@@ -1,0 +1,23 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+pymongo==4.6.0
+pydantic==2.5.0
+python-dotenv==1.0.0
+requests==2.31.0
+python-multipart==0.0.6
+
+# PDF and image processing dependencies
+PyMuPDF==1.23.0
+easyocr==1.7.0
+opencv-python==4.8.0.76
+torch==2.0.1
+torchvision==0.15.2
+
+# Text-to-speech dependencies
+gTTS==2.3.2
+
+# Vector database and embeddings
+faiss-cpu==1.7.4
+sentence-transformers==2.2.2
+langchain==0.0.350
+langchain-community==0.0.10

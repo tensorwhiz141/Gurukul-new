@@ -1,0 +1,15 @@
+{
+  "user_id": "madhu",
+  "user_name": "madhuram_bohra",
+  "income": 8000,
+  "expenses": [
+    {
+      "name": "food",
+      "amount": 3000
+    }
+  ],
+  "total_expenses": 4000,
+  "goal": "Save 1 crore rs",
+  "financial_type": "risky",
+  "risk_level": "high"
+}

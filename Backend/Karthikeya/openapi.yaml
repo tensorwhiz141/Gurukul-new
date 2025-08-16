@@ -1,0 +1,493 @@
+openapi: 3.0.3
+info:
+  title: Karthikeya Multilingual Reporting Engine API
+  description: |
+    Production-ready multilingual nudge system for Edumentor and Wellness Bot.
+
+    ## Features
+    - **8+ Indian Languages**: English, Hindi, Bengali, Gujarati, Marathi, Tamil, Telugu, Kannada
+    - **Configurable Thresholds**: Runtime threshold overrides via API
+    - **Context-Aware**: Separate logic for educational and wellness contexts
+    - **Robust Error Handling**: Graceful fallbacks and validation
+    - **Modular Architecture**: Independent, testable components
+
+    ## Supported Languages
+    - `en` - English, `hi` - हिन्दी (Hindi), `bn` - বাংলা (Bengali)
+    - `gu` - ગુજરાતી (Gujarati), `mr` - मराठी (Marathi)
+    - `ta` - தமிழ் (Tamil), `te` - తెలుగు (Telugu), `kn` - ಕನ್ನಡ (Kannada)
+
+    ## Contexts
+    - `edumentor` - Educational progress and performance
+    - `wellness` - Financial and emotional health
+
+  version: 2.0.0
+  contact:
+    name: Karthikeya Development Team
+    email: support@karthikeya.dev
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: http://localhost:5000
+    description: Development server
+  - url: https://api.karthikeya.dev
+    description: Production server
+
+paths:
+  /health:
+    get:
+      summary: Health check endpoint
+      description: Check the health status of the API
+      operationId: healthCheck
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+
+  /generate-report:
+    post:
+      summary: Generate multilingual report
+      description: Generate a multilingual report based on forecast/score data from Vedant's engine
+      operationId: generateReport
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReportRequest'
+            examples:
+              edumentor_progress:
+                summary: Edumentor Progress Report
+                value:
+                  user_id: "student_123"
+                  report_type: "progress_report"
+                  context: "edumentor"
+                  language: "en"
+                  data:
+                    completed_modules: 8
+                    total_modules: 10
+                    average_score: 85
+                    subject_area: "Mathematics"
+              wellness_financial:
+                summary: Wellness Financial Report
+                value:
+                  user_id: "user_456"
+                  report_type: "financial_health"
+                  context: "wellness"
+                  language: "hi"
+                  data:
+                    risk_level: "medium"
+                    spending_ratio: 1.1
+                    savings_rate: 8
+      responses:
+        '200':
+          description: Report generated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReportResponse'
+        '400':
+          description: Invalid request data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /generate-nudge:
+    post:
+      summary: Generate contextual nudges
+      description: Generate contextual nudges based on risk levels and user context
+      operationId: generateNudge
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NudgeRequest'
+            examples:
+              edumentor_nudges:
+                summary: Edumentor Nudges
+                value:
+                  user_id: "student_789"
+                  context: "edumentor"
+                  language: "en"
+                  user_data:
+                    average_score: 35
+                    engagement_score: 20
+                    missed_quizzes: 4
+              wellness_nudges:
+                summary: Wellness Nudges
+                value:
+                  user_id: "user_101"
+                  context: "wellness"
+                  language: "bn"
+                  user_data:
+                    financial:
+                      spending_ratio: 1.3
+                      savings_rate: 3
+                    emotional:
+                      stress_level: 80
+      responses:
+        '200':
+          description: Nudges generated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NudgeResponse'
+        '400':
+          description: Invalid request data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /languages:
+    get:
+      summary: Get supported languages
+      description: Get list of supported languages for report generation
+      operationId: getSupportedLanguages
+      responses:
+        '200':
+          description: List of supported languages
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LanguagesResponse'
+
+  /report-types:
+    get:
+      summary: Get available report types
+      description: Get available report types organized by context
+      operationId: getReportTypes
+      responses:
+        '200':
+          description: Available report types by context
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReportTypesResponse'
+
+  /sentiment/analyze:
+    post:
+      summary: Analyze sentiment
+      description: Analyze sentiment for given data and return sentiment information
+      operationId: analyzeSentiment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SentimentRequest'
+      responses:
+        '200':
+          description: Sentiment analysis result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SentimentResponse'
+        '400':
+          description: Invalid request data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    HealthResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "healthy"
+        timestamp:
+          type: string
+          format: date-time
+        version:
+          type: string
+          example: "1.0.0"
+        service:
+          type: string
+          example: "karthikeya-reporting-engine"
+
+    ReportRequest:
+      type: object
+      required:
+        - user_id
+        - report_type
+        - context
+      properties:
+        user_id:
+          type: string
+          description: Unique identifier for the user
+          example: "student_123"
+        report_type:
+          type: string
+          enum: [progress_report, quiz_performance, financial_health, emotional_health]
+          description: Type of report to generate
+        context:
+          type: string
+          enum: [edumentor, wellness]
+          description: Context for the report
+        language:
+          type: string
+          enum: [en, hi, bn, gu, mr, ta, te, kn]
+          default: en
+          description: Language for the report
+        data:
+          type: object
+          description: Context-specific data from forecast engine
+          additionalProperties: true
+        override_thresholds:
+          type: boolean
+          default: false
+          description: Whether to use threshold overrides
+        threshold_overrides:
+          type: object
+          description: Custom threshold values for analysis
+          additionalProperties: true
+          example:
+            risk_thresholds:
+              edumentor: 0.6
+              wellness_bot: 0.8
+
+    ReportResponse:
+      type: object
+      properties:
+        report_id:
+          type: string
+          description: Unique identifier for the generated report
+        user_id:
+          type: string
+        report_type:
+          type: string
+        language:
+          type: string
+        title:
+          type: string
+          description: Report title in the specified language
+        content:
+          type: object
+          description: Generated report content
+          additionalProperties: true
+        sentiment:
+          $ref: '#/components/schemas/SentimentInfo'
+        nudges:
+          type: array
+          items:
+            $ref: '#/components/schemas/NudgeInfo'
+        tts_ready:
+          type: boolean
+          description: Whether the content is ready for text-to-speech
+        metadata:
+          type: object
+          additionalProperties: true
+        timestamp:
+          type: string
+          format: date-time
+
+    NudgeRequest:
+      type: object
+      required:
+        - user_id
+        - context
+        - user_data
+      properties:
+        user_id:
+          type: string
+        context:
+          type: string
+          enum: [edumentor, wellness]
+        language:
+          type: string
+          enum: [en, hi, bn, gu, mr, ta, te, kn]
+          default: en
+        user_data:
+          type: object
+          description: Current user metrics and data
+          additionalProperties: true
+        historical_data:
+          type: object
+          description: Historical patterns and trends
+          additionalProperties: true
+        preferences:
+          type: object
+          description: User preferences for nudge types
+          additionalProperties: true
+
+    NudgeResponse:
+      type: object
+      properties:
+        user_id:
+          type: string
+        context:
+          type: string
+        language:
+          type: string
+        nudges:
+          type: array
+          items:
+            $ref: '#/components/schemas/GeneratedNudge'
+        sentiment:
+          $ref: '#/components/schemas/SentimentInfo'
+        generated_at:
+          type: string
+          format: date-time
+
+    GeneratedNudge:
+      type: object
+      properties:
+        nudge_id:
+          type: string
+        type:
+          type: string
+          enum: [educational, motivational, intervention, reminder, celebration]
+        urgency:
+          type: string
+          enum: [low, medium, high, critical]
+        title:
+          type: string
+        message:
+          type: string
+        action_text:
+          type: string
+        action_type:
+          type: string
+        metadata:
+          type: object
+          additionalProperties: true
+        expires_at:
+          type: string
+          format: date-time
+        created_at:
+          type: string
+          format: date-time
+
+    NudgeInfo:
+      type: object
+      properties:
+        type:
+          type: string
+        urgency:
+          type: string
+        message:
+          type: string
+        action:
+          type: string
+        emoji:
+          type: string
+        style:
+          type: string
+
+    SentimentInfo:
+      type: object
+      properties:
+        sentiment:
+          type: string
+          enum: [positive, neutral, concerned]
+        tone:
+          type: string
+          enum: [congratulatory, encouraging, gentle, supportive, alert]
+        description:
+          type: string
+        urgency:
+          type: string
+          enum: [low, medium, high]
+        confidence:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 1
+
+    SentimentRequest:
+      type: object
+      required:
+        - type
+        - value
+      properties:
+        type:
+          type: string
+          enum: [score, risk, engagement]
+        value:
+          type: number
+        language:
+          type: string
+          enum: [en, hi, bn, gu, mr, ta, te, kn]
+          default: en
+
+    SentimentResponse:
+      allOf:
+        - $ref: '#/components/schemas/SentimentInfo'
+
+    LanguagesResponse:
+      type: object
+      properties:
+        supported_languages:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                example: "en"
+              name:
+                type: string
+                example: "English"
+              native_name:
+                type: string
+                example: "English"
+
+    ReportTypesResponse:
+      type: object
+      properties:
+        edumentor:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+              name:
+                type: string
+        wellness:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+              name:
+                type: string
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error message describing what went wrong
+
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: API key for authentication (if required in production)
+
+security:
+  - ApiKeyAuth: []

@@ -1,0 +1,51 @@
+{
+  "user_id": "wellness_user_67890",
+  "report_type": "financial_health",
+  "context": "wellness",
+  "language": "en",
+  "data": {
+    "monthly_income": 50000,
+    "monthly_expenses": 45000,
+    "savings_rate": 10,
+    "debt_to_income_ratio": 0.3,
+    "emergency_fund_months": 2,
+    "spending_categories": {
+      "food": 15000,
+      "housing": 20000,
+      "transportation": 5000,
+      "entertainment": 3000,
+      "utilities": 2000
+    },
+    "financial_goals": {
+      "target_savings_rate": 20,
+      "emergency_fund_target": 6,
+      "debt_payoff_target": "2024-12-31"
+    },
+    "risk_level": "medium",
+    "stress_level": 60,
+    "sleep_quality": 7,
+    "activity_score": 75,
+    "social_interaction_days": 3,
+    "wellness_score": 70,
+    "recent_transactions": [
+      {"date": "2024-01-10", "amount": -2500, "category": "food", "description": "Grocery shopping"},
+      {"date": "2024-01-12", "amount": -8000, "category": "entertainment", "description": "Weekend outing"},
+      {"date": "2024-01-14", "amount": 5000, "category": "savings", "description": "Monthly savings"}
+    ],
+    "budget_alerts": [
+      {"category": "entertainment", "status": "over_budget", "amount": 3000},
+      {"category": "food", "status": "approaching_limit", "amount": 15000}
+    ]
+  },
+  "override_thresholds": true,
+  "threshold_overrides": {
+    "risk_thresholds": {
+      "wellness_bot": {"overall_risk": 0.8}
+    }
+  },
+  "metadata": {
+    "source": "wellness_bot",
+    "version": "2.1.0",
+    "request_id": "req_wellness_001"
+  }
+}

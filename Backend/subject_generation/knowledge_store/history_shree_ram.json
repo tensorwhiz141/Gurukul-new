@@ -1,0 +1,31 @@
+{
+  "subject": "history",
+  "topic": "shree ram",
+  "title": "The Shree Ram's Legacy: A Journey Through Ancient Wisdom",
+  "shloka": "Kathikram samadhi yojayoga,\nSiddhartham adhikram dhaakshama,\nRama ni mani ram, ram ni mani ram.",
+  "translation": "The Shree Ram's Journey, The Sattva Mind's Drive, The Sati's Dance.",
+  "explanation": "Shree Ram is a concept in ancient Indian philosophy that embodies the harmonious blend of Samadhi (inner peace), Dharma (natural state), and Dharaka (external discipline). It represents perfect balance across all aspects of life. Sati refers to inner being, embodying the perfect harmony found in nature and human existence. Dhaakshama relates to diversity or variety in nature, while kathikram is about pride or fixation. Shree Ram's journey reflects the struggle for balance between these elements, symbolizing inner peace and the interconnectedness of all living beings as taught by Vedic philosophy.",
+  "activity": "Students can create a Sati (inner being) symbol using geometric shapes representing Samadhi, Dharma, and Dharaka. This activity encourages them to visualize and embody the principles of perfect balance.",
+  "question": "How does the concept of Shree Ram influence modern understanding of personal development and relationships? Consider both traditional wisdom and contemporary applications.",
+  "wikipedia_info": {
+    "title": "Jai Shri Ram",
+    "summary": "Jai Shri Ram (IAST: Jaya Śrī Rāma) is an expression in Indic languages, translating to \"Glory to Lord Rama\" or \"Victory to Lord Rama\". The proclamation has been used by Hindus as a symbol of adhering to the Hindu faith, or for projection of varied faith-centered emotions.\nThe expression has been increasingly used by the Indian Hindu nationalist organisations Vishva Hindu Parishad (VHP), Bharatiya Janata Party (BJP) and their allies, which adopted the slogan in the late 20th century as a tool for increasing the visibility of Hinduism in public spaces, before going on to use it as a battle cry. The slogan has since been employed in connection with the perpetration of communal violence against Muslims.",
+    "url": "https://en.wikipedia.org/wiki/Jai_Shri_Ram",
+    "related_articles": [
+      "Lady Shri Ram College",
+      "Ram Mandir",
+      "Adam's Bridge",
+      "Shri Ram Janmbhoomi Teerth Kshetra"
+    ]
+  },
+  "sources": [
+    "Ollama (deepseek-r1:1.5b)"
+  ],
+  "wikipedia_summary": "Jai Shri Ram (IAST: Jaya Śrī Rāma) is an expression in Indic languages, translating to \"Glory to Lord Rama\" or \"Victory to Lord Rama\". The proclamation has been used by Hindus as a symbol of adhering to the Hindu faith, or for projection of varied faith-centered emotions.",
+  "metadata": {
+    "timestamp": 1751970591.0674827,
+    "date_created": "2025-07-08T15:59:51.067484",
+    "version": "1.0",
+    "last_updated": "2025-07-08T15:59:51.067489"
+  }
+}

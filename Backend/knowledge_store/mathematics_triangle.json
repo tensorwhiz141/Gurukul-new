@@ -1,0 +1,31 @@
+{
+  "subject": "mathematics",
+  "topic": "triangle",
+  "title": "Understanding triangle in mathematics",
+  "shloka": "ॐ सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः। सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत्॥",
+  "translation": "May all be happy, may all be free from disease, may all see auspiciousness, may none suffer.",
+  "explanation": "According to Wikipedia: A triangle is a polygon with three corners and three sides, one of the basic shapes in geometry. The corners, also called vertices, are zero-dimensional points while the sides connecting them, also called edges, are one-dimensional line segments. A triangle has three internal angles, each one bounded by a pair of adjacent edges; the sum of angles of a triangle always equals a straight angle (180 degrees or π radians). The triangle is a plane figure and its interior is a planar region. Sometimes an arbitrary edge is chosen to be the base, in which case the opposite vertex is called the apex; the shortest segment between the base and apex is the height. The area of a triangle equals one-half the product of height and base length.\n\nIn Euclidean geometry, any two points determine a unique line segment situated within a unique straight line, and any three points that do not all lie on the same straight line determine a unique triangle situated within a unique flat plane. More generally, four points in three-dimensional Euclidean space determine a solid figure called tetrahedron. \nIn non-Euclidean geometries, three \"straight\" segments (having zero curvature) also determine a \"triangle\", for instance, a spherical triangle or hyperbolic triangle. A geodesic triangle is a region of a general two-dimensional surface enclosed by three sides that are straight relative to the surface (geodesics). A curvilinear triangle is a shape with three curved sides, for instance, a circular triangle with circular-arc sides. (This article is about straight-sided triangles in Euclidean geometry, except where otherwise noted.)\nTriangles are classified into different types based on their angles and the lengths of their sides. Relations between angles and side lengths are a major focus of trigonometry. In particular, the sine, cosine, and tangent functions relate side lengths and angles in right triangles.\n\n\n\nThis topic is significant in mathematics because it represents an important aspect of ancient Indian knowledge systems. The study of triangle in the context of mathematics provides valuable insights into how ancient wisdom can inform modern understanding.",
+  "activity": "Research the relationship between mathematics and triangle using both traditional sources and modern scientific understanding. Compare and contrast the approaches.",
+  "question": "How does the understanding of triangle in mathematics complement or challenge modern perspectives?",
+  "wikipedia_info": {
+    "title": "Triangle",
+    "summary": "A triangle is a polygon with three corners and three sides, one of the basic shapes in geometry. The corners, also called vertices, are zero-dimensional points while the sides connecting them, also called edges, are one-dimensional line segments. A triangle has three internal angles, each one bounded by a pair of adjacent edges; the sum of angles of a triangle always equals a straight angle (180 degrees or π radians). The triangle is a plane figure and its interior is a planar region. Sometimes an arbitrary edge is chosen to be the base, in which case the opposite vertex is called the apex; the shortest segment between the base and apex is the height. The area of a triangle equals one-half the product of height and base length.\n\nIn Euclidean geometry, any two points determine a unique line segment situated within a unique straight line, and any three points that do not all lie on the same straight line determine a unique triangle situated within a unique flat plane. More generally, four points in three-dimensional Euclidean space determine a solid figure called tetrahedron. \nIn non-Euclidean geometries, three \"straight\" segments (having zero curvature) also determine a \"triangle\", for instance, a spherical triangle or hyperbolic triangle. A geodesic triangle is a region of a general two-dimensional surface enclosed by three sides that are straight relative to the surface (geodesics). A curvilinear triangle is a shape with three curved sides, for instance, a circular triangle with circular-arc sides. (This article is about straight-sided triangles in Euclidean geometry, except where otherwise noted.)\nTriangles are classified into different types based on their angles and the lengths of their sides. Relations between angles and side lengths are a major focus of trigonometry. In particular, the sine, cosine, and tangent functions relate side lengths and angles in right triangles.\n\n",
+    "url": "https://en.wikipedia.org/wiki/Triangle",
+    "related_articles": [
+      "Isosceles triangle",
+      "Golden triangle (mathematics)",
+      "Equilateral triangle",
+      "Pascal's triangle"
+    ]
+  },
+  "sources": [
+    "Wikipedia"
+  ],
+  "wikipedia_summary": "A triangle is a polygon with three corners and three sides, one of the basic shapes in geometry. The corners, also called vertices, are zero-dimensional points while the sides connecting them, also called edges, are one-dimensional line segments. A triangle has three internal angles, each one bounded by a pair of adjacent edges; the sum of angles of a triangle always equals a straight angle (180 degrees or π radians). The triangle is a plane figure and its interior is a planar region. Sometim...",
+  "metadata": {
+    "timestamp": 1751689736.6047955,
+    "date_created": "2025-07-05T09:58:56.604796",
+    "version": "1.0",
+    "last_updated": "2025-07-05T09:58:56.604799"
+  }
+}

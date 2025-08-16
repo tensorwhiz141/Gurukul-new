@@ -1,0 +1,31 @@
+{
+  "subject": "aptitude",
+  "topic": "ratio and proportion",
+  "title": "The essence of all things lies in their balance. Ratio and proportion are not merely mathematical concepts but integral parts of ancient Indian wisdom and philosophy.",
+  "shloka": "Dharana prashanam",
+  "translation": "The essence of all things lies in their balance.",
+  "explanation": "In ancient India, ratio and proportion were deeply rooted in the study of samadhi, or inner state. The Shulpa Sūtra (Vedic典) discusses these concepts extensively, emphasizing how they are used to maintain harmony and balance in yajnas and daily life. The Sulba Sūtra, which deals with geometry and construction, also employs ratios and proportions to design altars with precise measurements. These principles were not just mathematical tools but a reflection of the spiritual harmony that underpins human existence. In modern times, while these concepts remain foundational in various fields, they still serve as a testament to ancient wisdom's enduring relevance.",
+  "activity": "Have students research ancient Indian texts, such as the Sulba Sūtra and Shulpa Sūtra, to understand how ratio and proportion were applied in construction and religious rituals. Encourage them to create their own proportional designs or altar plans inspired by these sources.",
+  "question": "How does the study of ratios and proportions reflect our modern understanding of balance and harmony across different disciplines?",
+  "wikipedia_info": {
+    "title": "Glossary of engineering: M–Z",
+    "summary": "This glossary of engineering terms is a list of definitions about the major concepts of engineering. Please see the bottom of the page for glossaries of specific fields of engineering.\n\n",
+    "url": "https://en.wikipedia.org/wiki/Glossary_of_engineering:_M%E2%80%93Z",
+    "related_articles": [
+      "Glossary of engineering: A–L",
+      "Race and intelligence",
+      "Education in the United States",
+      "Intelligence quotient"
+    ]
+  },
+  "sources": [
+    "Ollama (deepseek-r1:1.5b)"
+  ],
+  "wikipedia_summary": "This glossary of engineering terms is a list of definitions about the major concepts of engineering. Please see the bottom of the page for glossaries of specific fields of engineering.",
+  "metadata": {
+    "timestamp": 1751958934.9924166,
+    "date_created": "2025-07-08T12:45:34.992418",
+    "version": "1.0",
+    "last_updated": "2025-07-08T12:45:34.992423"
+  }
+}

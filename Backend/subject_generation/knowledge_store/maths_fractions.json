@@ -1,0 +1,31 @@
+{
+  "subject": "maths",
+  "topic": "fractions",
+  "title": "Understanding fractions in maths",
+  "shloka": "ॐ सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः। सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत्॥",
+  "translation": "May all be happy, may all be free from disease, may all see auspiciousness, may none suffer.",
+  "explanation": "According to Wikipedia: A mathematical constant is a key number whose value is fixed by an unambiguous definition, often referred to by a symbol (e.g., an alphabet letter), or by mathematicians' names to facilitate using it across multiple mathematical problems. For example, the constant π may be defined as the ratio of the length of a circle's circumference to its diameter. The following list includes a decimal expansion and set containing each number, ordered by year of discovery.\nThe column headings may be clicked to sort the table alphabetically, by decimal value, or by set. Explanations of the symbols in the right hand column can be found by clicking on them.\n\nThis topic is significant in maths because it represents an important aspect of ancient Indian knowledge systems. The study of fractions in the context of maths provides valuable insights into how ancient wisdom can inform modern understanding.",
+  "activity": "Research the relationship between maths and fractions using both traditional sources and modern scientific understanding. Compare and contrast the approaches.",
+  "question": "How does the understanding of fractions in maths complement or challenge modern perspectives?",
+  "wikipedia_info": {
+    "title": "List of mathematical constants",
+    "summary": "A mathematical constant is a key number whose value is fixed by an unambiguous definition, often referred to by a symbol (e.g., an alphabet letter), or by mathematicians' names to facilitate using it across multiple mathematical problems. For example, the constant π may be defined as the ratio of the length of a circle's circumference to its diameter. The following list includes a decimal expansion and set containing each number, ordered by year of discovery.\nThe column headings may be clicked to sort the table alphabetically, by decimal value, or by set. Explanations of the symbols in the right hand column can be found by clicking on them.",
+    "url": "https://en.wikipedia.org/wiki/List_of_mathematical_constants",
+    "related_articles": [
+      "Partial fraction decomposition",
+      "Fraction",
+      "Vedic Mathematics",
+      "Murderous Maths"
+    ]
+  },
+  "sources": [
+    "Wikipedia"
+  ],
+  "wikipedia_summary": "A mathematical constant is a key number whose value is fixed by an unambiguous definition, often referred to by a symbol (e.g., an alphabet letter), or by mathematicians' names to facilitate using it across multiple mathematical problems. For example, the constant π may be defined as the ratio of the length of a circle's circumference to its diameter. The following list includes a decimal expansion and set containing each number, ordered by year of discovery.",
+  "metadata": {
+    "timestamp": 1751713242.4434445,
+    "date_created": "2025-07-05T16:30:42.443446",
+    "version": "1.0",
+    "last_updated": "2025-07-05T16:30:42.443452"
+  }
+}

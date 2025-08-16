@@ -1,0 +1,31 @@
+{
+  "subject": "maths",
+  "topic": "triangles",
+  "title": "The knowledge that all things come to you through the mind is one word—triangles.",
+  "shloka": "Vivekamathi",
+  "translation": "The knowledge that all things come to you through the mind is one word—triangles.",
+  "explanation": "Triangles are considered a fundamental concept in Vedic mathematics due to their simplicity and versatility. They form the basis of various fields such as geometry, arithmetic, and algebra. The shloka suggests that understanding triangles is essential because they relate to all other shapes and concepts. Ancient Indian mathematicians like Baudhayana, Apastambra, and others contributed significantly to geometry, with their work influencing later mathematical developments. Triangles are still relevant today, particularly in engineering, architecture, physics, and computer graphics. Their properties, such as sides, angles, and area calculations, remain important for practical applications.",
+  "activity": "Students will draw various shapes using a compass and ruler or traditional geometric tools to create triangles and explore their properties. They will measure angles and sides to understand congruence and similarity.",
+  "question": "Reflect on how an understanding of triangles has evolved over time in ancient Indian mathematics and its relevance today in modern fields such as engineering and technology.",
+  "wikipedia_info": {
+    "title": "Magic triangle (mathematics)",
+    "summary": "A magic triangle is a magic arrangement of the integers from 1 to n in a triangular figure.\n\n",
+    "url": "https://en.wikipedia.org/wiki/Magic_triangle_(mathematics)",
+    "related_articles": [
+      "Congruence (geometry)",
+      "Degeneracy (mathematics)",
+      "Incircle and excircles",
+      "Triangle center"
+    ]
+  },
+  "sources": [
+    "Ollama (deepseek-r1:1.5b)"
+  ],
+  "wikipedia_summary": "A magic triangle is a magic arrangement of the integers from 1 to n in a triangular figure.",
+  "metadata": {
+    "timestamp": 1751711912.7450035,
+    "date_created": "2025-07-05T16:08:32.745005",
+    "version": "1.0",
+    "last_updated": "2025-07-05T16:08:32.745011"
+  }
+}

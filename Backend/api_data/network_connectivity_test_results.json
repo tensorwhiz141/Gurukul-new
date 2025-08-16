@@ -1,0 +1,281 @@
+[
+  {
+    "test_type": "intermittent_connectivity",
+    "total_requests": 8,
+    "results": [
+      {
+        "request_id": 0,
+        "status": "success",
+        "status_code": 200,
+        "response_time": 2.03895902633667,
+        "network_delay": 1.6590248534751293,
+        "timestamp": "2025-06-24T14:56:31.686543"
+      },
+      {
+        "request_id": 1,
+        "status": "success",
+        "status_code": 200,
+        "response_time": 2.052706718444824,
+        "network_delay": 1.5670224524126648,
+        "timestamp": "2025-06-24T14:56:35.307596"
+      },
+      {
+        "request_id": 2,
+        "status": "success",
+        "status_code": 200,
+        "response_time": 2.058990478515625,
+        "network_delay": 0.4038607490787709,
+        "timestamp": "2025-06-24T14:56:37.772013"
+      },
+      {
+        "request_id": 3,
+        "status": "success",
+        "status_code": 200,
+        "response_time": 2.049480676651001,
+        "network_delay": 1.8266796576675233,
+        "timestamp": "2025-06-24T14:56:41.649527"
+      },
+      {
+        "request_id": 4,
+        "status": "simulated_network_failure",
+        "network_delay": 1.7093723444055302,
+        "timestamp": "2025-06-24T14:56:43.360058"
+      },
+      {
+        "request_id": 5,
+        "status": "success",
+        "status_code": 200,
+        "response_time": 2.049475908279419,
+        "network_delay": 1.9754624306776958,
+        "timestamp": "2025-06-24T14:56:47.386548"
+      },
+      {
+        "request_id": 6,
+        "status": "success",
+        "status_code": 200,
+        "response_time": 2.0558223724365234,
+        "network_delay": 0.5761679518140128,
+        "timestamp": "2025-06-24T14:56:50.019585"
+      },
+      {
+        "request_id": 7,
+        "status": "success",
+        "status_code": 200,
+        "response_time": 2.0667574405670166,
+        "network_delay": 1.741229813067094,
+        "timestamp": "2025-06-24T14:56:53.828818"
+      }
+    ],
+    "summary": {
+      "successful": 7,
+      "timeouts": 0,
+      "connection_errors": 0,
+      "simulated_failures": 1
+    }
+  },
+  {
+    "test_type": "api_endpoint_failures",
+    "results": [
+      {
+        "test_name": "Financial Simulator Unavailable - Primary",
+        "url": "http://localhost:8002/start-simulation",
+        "status": "unexpected_success",
+        "status_code": 200,
+        "response_time": 2.0523629188537598,
+        "timestamp": "2025-06-24T14:56:55.884996"
+      },
+      {
+        "test_name": "Financial Simulator Unavailable - Backup",
+        "url": "http://localhost:8001/start-simulation",
+        "status": "unexpected_success",
+        "status_code": 404,
+        "response_time": 2.042436122894287,
+        "timestamp": "2025-06-24T14:56:57.928068"
+      },
+      {
+        "test_name": "Lesson Generator Unavailable - Primary",
+        "url": "http://localhost:8000/lessons",
+        "status": "timeout",
+        "response_time": 5.0571653842926025,
+        "timestamp": "2025-06-24T14:57:02.986261"
+      },
+      {
+        "test_name": "Lesson Generator Unavailable - Backup",
+        "url": "http://localhost:8001/lessons",
+        "status": "unexpected_success",
+        "status_code": 404,
+        "response_time": 2.0380377769470215,
+        "timestamp": "2025-06-24T14:57:05.024430"
+      }
+    ]
+  },
+  {
+    "test_type": "partial_data_corruption",
+    "results": [
+      {
+        "scenario": "Missing Required Fields",
+        "status": "expected_validation_error",
+        "status_code": 422,
+        "response_time": 2.032017946243286,
+        "timestamp": "2025-06-24T14:57:07.056923",
+        "response_data": {
+          "detail": [
+            {
+              "type": "missing",
+              "loc": [
+                "body",
+                "user_name"
+              ],
+              "msg": "Field required",
+              "input": {
+                "user_id": "corruption-test",
+                "goal": "Test missing fields"
+              }
+            },
+            {
+              "type": "missing",
+              "loc": [
+                "body",
+                "income"
+              ],
+              "msg": "Field required",
+              "input": {
+                "user_id": "corruption-test",
+                "goal": "Test missing fields"
+              }
+            },
+            {
+              "type": "missing",
+              "loc": [
+                "body",
+                "expenses"
+              ],
+              "msg": "Field required",
+              "input": {
+                "user_id": "corruption-test",
+                "goal": "Test missing fields"
+              }
+            },
+            {
+              "type": "missing",
+              "loc": [
+                "body",
+                "total_expenses"
+              ],
+              "msg": "Field required",
+              "input": {
+                "user_id": "corruption-test",
+                "goal": "Test missing fields"
+              }
+            },
+            {
+              "type": "missing",
+              "loc": [
+                "body",
+                "financial_type"
+              ],
+              "msg": "Field required",
+              "input": {
+                "user_id": "corruption-test",
+                "goal": "Test missing fields"
+              }
+            },
+            {
+              "type": "missing",
+              "loc": [
+                "body",
+                "risk_level"
+              ],
+              "msg": "Field required",
+              "input": {
+                "user_id": "corruption-test",
+                "goal": "Test missing fields"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "scenario": "Invalid Data Types",
+        "status": "expected_validation_error",
+        "status_code": 422,
+        "response_time": 2.033242702484131,
+        "timestamp": "2025-06-24T14:57:09.091027",
+        "response_data": {
+          "detail": [
+            {
+              "type": "float_parsing",
+              "loc": [
+                "body",
+                "income"
+              ],
+              "msg": "Input should be a valid number, unable to parse string as a number",
+              "input": "not_a_number"
+            },
+            {
+              "type": "list_type",
+              "loc": [
+                "body",
+                "expenses"
+              ],
+              "msg": "Input should be a valid list",
+              "input": "not_an_array"
+            },
+            {
+              "type": "float_type",
+              "loc": [
+                "body",
+                "total_expenses"
+              ],
+              "msg": "Input should be a valid number",
+              "input": null
+            },
+            {
+              "type": "string_type",
+              "loc": [
+                "body",
+                "financial_type"
+              ],
+              "msg": "Input should be a valid string",
+              "input": 123
+            },
+            {
+              "type": "string_type",
+              "loc": [
+                "body",
+                "risk_level"
+              ],
+              "msg": "Input should be a valid string",
+              "input": []
+            }
+          ]
+        }
+      },
+      {
+        "scenario": "Extremely Large Values",
+        "status": "unexpected_success",
+        "status_code": 200,
+        "response_time": 2.042637825012207,
+        "timestamp": "2025-06-24T14:57:11.133892",
+        "response_data": {
+          "status": "success",
+          "message": "Simulation started",
+          "task_id": "cb8d771e-36fe-4546-9784-8eb524606f61"
+        }
+      },
+      {
+        "scenario": "Malformed JSON Structure",
+        "status": "timeout",
+        "response_time": 12.03324842453003,
+        "timestamp": "2025-06-24T14:57:23.167588"
+      }
+    ]
+  },
+  {
+    "test_type": "browser_refresh_simulation",
+    "task_id": "68d4877c-0152-46e8-b0e3-adce772ec89c",
+    "status": "task_persistent",
+    "task_status": "success",
+    "timestamp": "2025-06-24T14:57:29.264461"
+  }
+]

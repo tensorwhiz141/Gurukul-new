@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple TTS Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 18px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        button:disabled {
+            background: #666;
+            cursor: not-allowed;
+        }
+        .status {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .success { background: #4CAF50; }
+        .error { background: #f44336; }
+        .info { background: #2196F3; }
+        .warning { background: #ff9800; }
+    </style>
+</head>
+<body>
+    <h1>🔊 Simple TTS Test</h1>
+    <p>This test will help us verify if TTS audio can play in your browser.</p>
+    
+    <div id="status" class="status info">Click the button below to test TTS</div>
+    
+    <button onclick="testTTS()" id="testBtn">🎵 Test TTS Audio</button>
+    <button onclick="stopAudio()" id="stopBtn" disabled>⏹️ Stop Audio</button>
+    
+    <div style="margin-top: 30px;">
+        <h3>Instructions:</h3>
+        <p>1. Make sure your speakers/headphones are on</p>
+        <p>2. Check your system volume</p>
+        <p>3. Click "Test TTS Audio" button</p>
+        <p>4. You should hear: "This is a simple TTS test"</p>
+        <p><strong>5. For Gurukul app (port 5173): Enable autoplay for http://localhost:5173</strong></p>
+    </div>
+
+    <script>
+        let currentAudio = null;
+        const TTS_BASE_URL = 'http://localhost:8007';
+
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.className = `status ${type}`;
+            statusDiv.innerHTML = message;
+        }
+
+        async function testTTS() {
+            const testBtn = document.getElementById('testBtn');
+            const stopBtn = document.getElementById('stopBtn');
+            
+            testBtn.disabled = true;
+            showStatus('🔄 Generating TTS audio...', 'info');
+
+            try {
+                // Step 1: Generate TTS
+                const formData = new FormData();
+                formData.append('text', 'This is a simple TTS test. If you can hear this message, then text to speech is working correctly in your browser.');
+
+                const response = await fetch(`${TTS_BASE_URL}/api/generate`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error(`TTS generation failed: ${response.status}`);
+                }
+
+                const result = await response.json();
+                console.log('TTS generated:', result);
+
+                // Step 2: Play audio
+                showStatus('🔊 Playing audio...', 'info');
+                const audioUrl = `${TTS_BASE_URL}${result.audio_url}`;
+                
+                // Create audio element
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio = null;
+                }
+
+                currentAudio = new Audio(audioUrl);
+                currentAudio.volume = 1.0;
+
+                // Event listeners
+                currentAudio.addEventListener('ended', () => {
+                    showStatus('✅ TTS test completed successfully! You should have heard the test message.', 'success');
+                    testBtn.disabled = false;
+                    stopBtn.disabled = true;
+                    currentAudio = null;
+                });
+
+                currentAudio.addEventListener('error', (error) => {
+                    console.error('Audio error:', error);
+                    showStatus('❌ Audio playback failed. Check console for details.', 'error');
+                    testBtn.disabled = false;
+                    stopBtn.disabled = true;
+                    currentAudio = null;
+                });
+
+                currentAudio.addEventListener('loadstart', () => {
+                    console.log('Audio loading started');
+                });
+
+                currentAudio.addEventListener('canplay', () => {
+                    console.log('Audio can start playing');
+                });
+
+                // Try to play
+                const playPromise = currentAudio.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise
+                        .then(() => {
+                            console.log('Audio playback started successfully');
+                            showStatus('🎵 Audio is playing... Listen for the test message!', 'success');
+                            stopBtn.disabled = false;
+                        })
+                        .catch((error) => {
+                            console.error('Play error:', error);
+                            if (error.name === 'NotAllowedError') {
+                                showStatus('⚠️ Autoplay blocked. This is normal - you clicked the button so it should work. Check your speakers!', 'warning');
+                            } else {
+                                showStatus(`❌ Playback error: ${error.message}`, 'error');
+                            }
+                            testBtn.disabled = false;
+                            stopBtn.disabled = true;
+                        });
+                }
+
+            } catch (error) {
+                console.error('TTS test error:', error);
+                showStatus(`❌ TTS test failed: ${error.message}`, 'error');
+                testBtn.disabled = false;
+            }
+        }
+
+        function stopAudio() {
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio = null;
+                document.getElementById('stopBtn').disabled = true;
+                document.getElementById('testBtn').disabled = false;
+                showStatus('⏹️ Audio stopped', 'info');
+            }
+        }
+
+        // Test service availability on load
+        window.addEventListener('load', async () => {
+            try {
+                const response = await fetch(`${TTS_BASE_URL}/api/health`);
+                if (response.ok) {
+                    showStatus('✅ TTS service is available. Ready to test!', 'success');
+                } else {
+                    showStatus('❌ TTS service not available. Make sure it\'s running on port 8007.', 'error');
+                }
+            } catch (error) {
+                showStatus('❌ Cannot connect to TTS service. Make sure it\'s running on port 8007.', 'error');
+            }
+        });
+    </script>
+</body>
+</html>

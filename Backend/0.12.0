@@ -1,0 +1,38 @@
+Requirement already satisfied: pyttsx3 in c:\users\pc\desktop\gurukul front and back ass\.venv\lib\site-packages (2.99)
+Collecting gTTS
+  Using cached gTTS-2.5.4-py3-none-any.whl.metadata (4.1 kB)
+Collecting pygame
+  Downloading pygame-2.6.1-cp313-cp313-win_amd64.whl.metadata (13 kB)
+Collecting soundfile
+  Downloading soundfile-0.13.1-py2.py3-none-win_amd64.whl.metadata (16 kB)
+Requirement already satisfied: comtypes in c:\users\pc\desktop\gurukul front and back ass\.venv\lib\site-packages (from pyttsx3) (1.4.11)
+Requirement already satisfied: pypiwin32 in c:\users\pc\desktop\gurukul front and back ass\.venv\lib\site-packages (from pyttsx3) (223)
+Requirement already satisfied: pywin32 in c:\users\pc\desktop\gurukul front and back ass\.venv\lib\site-packages (from pyttsx3) (311)
+Requirement already satisfied: requests<3,>=2.27 in c:\users\pc\desktop\gurukul front and back ass\.venv\lib\site-packages (from gTTS) (2.32.4)
+Collecting click<8.2,>=7.1 (from gTTS)
+  Using cached click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+Requirement already satisfied: colorama in c:\users\pc\desktop\gurukul front and back ass\.venv\lib\site-packages (from click<8.2,>=7.1->gTTS) (0.4.6)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\users\pc\desktop\gurukul front and back ass\.venv\lib\site-packages (from requests<3,>=2.27->gTTS) (3.4.2)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\pc\desktop\gurukul front and back ass\.venv\lib\site-packages (from requests<3,>=2.27->gTTS) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\pc\desktop\gurukul front and back ass\.venv\lib\site-packages (from requests<3,>=2.27->gTTS) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\pc\desktop\gurukul front and back ass\.venv\lib\site-packages (from requests<3,>=2.27->gTTS) (2025.7.14)
+Collecting cffi>=1.0 (from soundfile)
+  Using cached cffi-1.17.1-cp313-cp313-win_amd64.whl.metadata (1.6 kB)
+Requirement already satisfied: numpy in c:\users\pc\desktop\gurukul front and back ass\.venv\lib\site-packages (from soundfile) (2.2.6)
+Collecting pycparser (from cffi>=1.0->soundfile)
+  Using cached pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Using cached gTTS-2.5.4-py3-none-any.whl (29 kB)
+Using cached click-8.1.8-py3-none-any.whl (98 kB)
+Downloading pygame-2.6.1-cp313-cp313-win_amd64.whl (10.6 MB)
+   -------------------------------- 10.6/10.6 MB 6.5 MB/s eta 0:00:00
+Downloading soundfile-0.13.1-py2.py3-none-win_amd64.whl (1.0 MB)
+   ---------------------------------- 1.0/1.0 MB 8.5 MB/s eta 0:00:00
+Using cached cffi-1.17.1-cp313-cp313-win_amd64.whl (182 kB)
+Using cached pycparser-2.22-py3-none-any.whl (117 kB)
+Installing collected packages: pygame, pycparser, click, gTTS, cffi, soundfile
+  Attempting uninstall: click
+    Found existing installation: click 8.2.1
+    Uninstalling click-8.2.1:
+      Successfully uninstalled click-8.2.1
+
+Successfully installed cffi-1.17.1 click-8.1.8 gTTS-2.5.4 pycparser-2.22 pygame-2.6.1 soundfile-0.13.1

@@ -1,0 +1,259 @@
+# Nudge Configuration for Karthikeya Multilingual Reporting Engine
+# This file defines risk thresholds, tone mappings, and nudge behavior settings
+
+# Risk Thresholds by Context
+risk_thresholds:
+  edumentor:
+    # Overall risk threshold for educational context
+    overall_risk: 0.65
+    
+    # Specific metric thresholds
+    metrics:
+      average_score:
+        excellent: 85
+        good: 70
+        average: 50
+        poor: 30
+        critical: 0
+      
+      engagement_score:
+        high: 80
+        medium: 50
+        low: 30
+        critical: 10
+      
+      quiz_completion_rate:
+        excellent: 90
+        good: 75
+        average: 60
+        poor: 40
+        critical: 20
+      
+      streak_maintenance:
+        safe_days: 0
+        warning_days: 1
+        critical_days: 3
+      
+      missed_assignments:
+        low_concern: 1
+        medium_concern: 3
+        high_concern: 5
+        critical: 8
+
+  wellness_bot:
+    # Overall risk threshold for wellness context
+    overall_risk: 0.75
+    
+    # Financial health thresholds
+    financial:
+      spending_ratio:
+        safe: 0.9
+        warning: 1.0
+        concerning: 1.1
+        critical: 1.3
+      
+      savings_rate:
+        excellent: 20
+        good: 15
+        average: 10
+        poor: 5
+        critical: 0
+      
+      debt_to_income:
+        safe: 0.3
+        warning: 0.4
+        concerning: 0.5
+        critical: 0.7
+      
+      emergency_fund_months:
+        excellent: 6
+        good: 3
+        average: 1
+        poor: 0.5
+        critical: 0
+    
+    # Emotional health thresholds
+    emotional:
+      stress_level:
+        low: 30
+        medium: 50
+        high: 70
+        critical: 85
+      
+      sleep_quality:
+        excellent: 8
+        good: 7
+        average: 6
+        poor: 5
+        critical: 3
+      
+      social_interaction_days:
+        healthy: 2
+        concerning: 5
+        worrying: 10
+        critical: 14
+      
+      activity_score:
+        high: 80
+        medium: 60
+        low: 40
+        critical: 20
+
+# Tone Mapping Configuration
+tone_mapping:
+  high: alert
+  medium: gentle
+  low: congratulatory
+
+# Nudge Behavior Settings
+nudge_behavior:
+  # Frequency controls
+  frequency:
+    max_nudges_per_day: 5
+    max_nudges_per_hour: 2
+    cooldown_period_minutes: 30
+    
+  # Priority settings
+  priority:
+    critical_override: true
+    high_priority_limit: 3
+    medium_priority_limit: 2
+    low_priority_limit: 1
+  
+  # Delivery settings
+  delivery:
+    immediate_delivery_urgency: [critical, high]
+    batch_delivery_urgency: [medium, low]
+    retry_attempts: 3
+    retry_delay_minutes: 15
+
+# Context-specific Nudge Rules
+nudge_rules:
+  edumentor:
+    triggers:
+      poor_performance:
+        threshold: 40
+        urgency: high
+        tone: supportive
+        action: schedule_tutoring
+        
+      missed_quizzes:
+        threshold: 2
+        urgency: medium
+        tone: gentle
+        action: take_quiz
+        
+      low_engagement:
+        threshold: 30
+        urgency: high
+        tone: encouraging
+        action: resume_learning
+        
+      streak_break:
+        threshold: 1
+        urgency: medium
+        tone: motivational
+        action: continue_lesson
+        
+      assignment_overdue:
+        threshold: 1
+        urgency: high
+        tone: alert
+        action: submit_assignment
+
+  wellness_bot:
+    financial:
+      overspending:
+        threshold: 110  # percentage of budget
+        urgency: high
+        tone: alert
+        action: review_budget
+        
+      low_savings:
+        threshold: 5  # percentage
+        urgency: medium
+        tone: gentle
+        action: increase_savings
+        
+      bill_due:
+        threshold: 3  # days
+        urgency: high
+        tone: alert
+        action: pay_bills
+        
+      debt_increase:
+        threshold: 10  # percentage increase
+        urgency: high
+        tone: supportive
+        action: debt_counseling
+    
+    emotional:
+      stress_spike:
+        threshold: 75
+        urgency: high
+        tone: supportive
+        action: stress_relief
+        
+      poor_sleep:
+        threshold: 5
+        urgency: medium
+        tone: gentle
+        action: sleep_hygiene
+        
+      social_isolation:
+        threshold: 7  # days
+        urgency: medium
+        tone: encouraging
+        action: social_connection
+        
+      low_activity:
+        threshold: 20
+        urgency: medium
+        tone: motivational
+        action: increase_activity
+
+# Override Settings
+override_settings:
+  # Allow API-level threshold overrides
+  allow_api_overrides: true
+  
+  # Override validation
+  override_validation:
+    min_threshold: 0
+    max_threshold: 100
+    allowed_fields: [risk_thresholds, tone_mapping, nudge_behavior]
+  
+  # Override logging
+  override_logging:
+    log_overrides: true
+    log_level: INFO
+
+# A/B Testing Configuration
+ab_testing:
+  enabled: false
+  experiments:
+    tone_variation:
+      enabled: false
+      variants: [gentle, encouraging, supportive]
+      traffic_split: [33, 33, 34]
+    
+    threshold_sensitivity:
+      enabled: false
+      variants: [conservative, standard, aggressive]
+      threshold_multipliers: [0.8, 1.0, 1.2]
+
+# Performance Settings
+performance:
+  cache_config: true
+  cache_ttl_seconds: 1800
+  batch_processing: true
+  async_delivery: true
+
+# Validation Rules
+validation:
+  required_fields: [risk_thresholds, tone_mapping, nudge_behavior]
+  threshold_ranges:
+    min: 0
+    max: 100
+  urgency_levels: [low, medium, high, critical]
+  tone_types: [congratulatory, encouraging, gentle, supportive, alert]

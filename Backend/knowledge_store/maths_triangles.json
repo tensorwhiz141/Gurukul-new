@@ -1,0 +1,31 @@
+{
+  "subject": "maths",
+  "topic": "triangles",
+  "title": "Understanding triangles in maths",
+  "shloka": "ॐ सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः। सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत्॥",
+  "translation": "May all be happy, may all be free from disease, may all see auspiciousness, may none suffer.",
+  "explanation": "According to Wikipedia: A magic triangle is a magic arrangement of the integers from 1 to n in a triangular figure.\n\n\n\nThis topic is significant in maths because it represents an important aspect of ancient Indian knowledge systems. The study of triangles in the context of maths provides valuable insights into how ancient wisdom can inform modern understanding.",
+  "activity": "Research the relationship between maths and triangles using both traditional sources and modern scientific understanding. Compare and contrast the approaches.",
+  "question": "How does the understanding of triangles in maths complement or challenge modern perspectives?",
+  "wikipedia_info": {
+    "title": "Magic triangle (mathematics)",
+    "summary": "A magic triangle is a magic arrangement of the integers from 1 to n in a triangular figure.\n\n",
+    "url": "https://en.wikipedia.org/wiki/Magic_triangle_(mathematics)",
+    "related_articles": [
+      "Congruence (geometry)",
+      "Degeneracy (mathematics)",
+      "Incircle and excircles",
+      "Triangle center"
+    ]
+  },
+  "sources": [
+    "Wikipedia"
+  ],
+  "wikipedia_summary": "A magic triangle is a magic arrangement of the integers from 1 to n in a triangular figure.",
+  "metadata": {
+    "timestamp": 1751689467.3525949,
+    "date_created": "2025-07-05T09:54:27.352597",
+    "version": "1.0",
+    "last_updated": "2025-07-05T09:54:27.352603"
+  }
+}

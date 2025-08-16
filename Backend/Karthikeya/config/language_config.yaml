@@ -1,0 +1,157 @@
+# Language Configuration for Karthikeya Multilingual Reporting Engine
+# This file defines supported languages, fallback logic, and language-specific settings
+
+# Supported Languages
+# Each language entry includes ISO 639-1 code, native name, and script information
+languages_supported:
+  - code: en
+    name: English
+    native_name: English
+    script: Latin
+    direction: ltr
+    enabled: true
+    
+  - code: hi
+    name: Hindi
+    native_name: हिन्दी
+    script: Devanagari
+    direction: ltr
+    enabled: true
+    
+  - code: bn
+    name: Bengali
+    native_name: বাংলা
+    script: Bengali
+    direction: ltr
+    enabled: true
+    
+  - code: gu
+    name: Gujarati
+    native_name: ગુજરાતી
+    script: Gujarati
+    direction: ltr
+    enabled: true
+    
+  - code: mr
+    name: Marathi
+    native_name: मराठी
+    script: Devanagari
+    direction: ltr
+    enabled: true
+    
+  - code: ta
+    name: Tamil
+    native_name: தமிழ்
+    script: Tamil
+    direction: ltr
+    enabled: true
+    
+  - code: te
+    name: Telugu
+    native_name: తెలుగు
+    script: Telugu
+    direction: ltr
+    enabled: true
+    
+  - code: kn
+    name: Kannada
+    native_name: ಕನ್ನಡ
+    script: Kannada
+    direction: ltr
+    enabled: true
+
+# Fallback Configuration
+fallback_language: en
+
+# Language Detection Settings
+language_detection:
+  auto_detect: false
+  confidence_threshold: 0.8
+  default_on_failure: en
+
+# Regional Preferences
+regional_mappings:
+  IN: # India
+    primary_languages: [hi, en]
+    regional_languages:
+      - state: Gujarat
+        languages: [gu, hi, en]
+      - state: Maharashtra
+        languages: [mr, hi, en]
+      - state: Tamil Nadu
+        languages: [ta, en, hi]
+      - state: Telangana
+        languages: [te, hi, en]
+      - state: Andhra Pradesh
+        languages: [te, hi, en]
+      - state: Karnataka
+        languages: [kn, hi, en]
+      - state: West Bengal
+        languages: [bn, hi, en]
+
+# Language-specific Settings
+language_settings:
+  en:
+    date_format: "%B %d, %Y"
+    number_format: "1,234.56"
+    currency_symbol: "₹"
+    
+  hi:
+    date_format: "%d %B %Y"
+    number_format: "1,23,456.78"
+    currency_symbol: "₹"
+    
+  bn:
+    date_format: "%d %B %Y"
+    number_format: "1,23,456.78"
+    currency_symbol: "₹"
+    
+  gu:
+    date_format: "%d %B %Y"
+    number_format: "1,23,456.78"
+    currency_symbol: "₹"
+    
+  mr:
+    date_format: "%d %B %Y"
+    number_format: "1,23,456.78"
+    currency_symbol: "₹"
+    
+  ta:
+    date_format: "%d %B %Y"
+    number_format: "1,23,456.78"
+    currency_symbol: "₹"
+    
+  te:
+    date_format: "%d %B %Y"
+    number_format: "1,23,456.78"
+    currency_symbol: "₹"
+    
+  kn:
+    date_format: "%d %B %Y"
+    number_format: "1,23,456.78"
+    currency_symbol: "₹"
+
+# Validation Rules
+validation:
+  min_language_code_length: 2
+  max_language_code_length: 3
+  required_fields: [code, name, native_name]
+  
+# Logging Configuration
+logging:
+  log_fallbacks: true
+  log_level: INFO
+  log_unsupported_requests: true
+  
+# Feature Flags
+features:
+  enable_language_detection: false
+  enable_regional_fallback: true
+  enable_script_validation: true
+  enable_rtl_support: false  # All current languages are LTR
+
+# Performance Settings
+performance:
+  cache_templates: true
+  cache_ttl_seconds: 3600
+  preload_languages: [en, hi, bn]  # Most commonly used languages

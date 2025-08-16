@@ -1,0 +1,246 @@
+[
+  {
+    "test_type": "concurrent_financial_simulations",
+    "total_requests": 5,
+    "successful": 5,
+    "failed": 0,
+    "success_rate": 1.0,
+    "total_time": 2.498663902282715,
+    "results": [
+      {
+        "user_id": 4,
+        "status_code": 200,
+        "response_time": 2.488358736038208,
+        "success": true,
+        "timestamp": "2025-06-24T14:54:52.936585",
+        "task_id": "636cd940-5061-42e7-9b59-96521edd145e",
+        "message": "Simulation started"
+      },
+      {
+        "user_id": 0,
+        "status_code": 200,
+        "response_time": 2.4917585849761963,
+        "success": true,
+        "timestamp": "2025-06-24T14:54:52.937875",
+        "task_id": "9e73ed61-937a-4d06-9dd2-ccc52d2b2e18",
+        "message": "Simulation started"
+      },
+      {
+        "user_id": 2,
+        "status_code": 200,
+        "response_time": 2.493642807006836,
+        "success": true,
+        "timestamp": "2025-06-24T14:54:52.940358",
+        "task_id": "667a89bf-1d3f-452f-8efd-b0687cccde7e",
+        "message": "Simulation started"
+      },
+      {
+        "user_id": 1,
+        "status_code": 200,
+        "response_time": 2.4958696365356445,
+        "success": true,
+        "timestamp": "2025-06-24T14:54:52.942352",
+        "task_id": "051187bf-54ea-45fc-93f8-d8f9a9ee4a69",
+        "message": "Simulation started"
+      },
+      {
+        "user_id": 3,
+        "status_code": 200,
+        "response_time": 2.4967222213745117,
+        "success": true,
+        "timestamp": "2025-06-24T14:54:52.944207",
+        "task_id": "d7e63f2f-2772-40bb-a0e4-0354263d822b",
+        "message": "Simulation started"
+      }
+    ]
+  },
+  {
+    "test_type": "concurrent_lesson_generation",
+    "total_requests": 4,
+    "successful": 1,
+    "failed": 3,
+    "success_rate": 0.25,
+    "total_time": 33.52952718734741,
+    "results": [
+      {
+        "request_id": 1,
+        "subject": "Science",
+        "topic": "Physics",
+        "status_code": 200,
+        "response_time": 3.5253262519836426,
+        "success": true,
+        "timestamp": "2025-06-24T14:54:56.470782",
+        "task_id": "88f911bd-2030-4609-9bcc-3f9684329c54",
+        "status": "pending"
+      },
+      {
+        "request_id": 0,
+        "subject": "Mathematics",
+        "topic": "Algebra",
+        "status_code": 0,
+        "response_time": 32.027618169784546,
+        "success": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=30)",
+        "timestamp": "2025-06-24T14:55:24.972743"
+      },
+      {
+        "request_id": 2,
+        "subject": "History",
+        "topic": "World War II",
+        "status_code": 0,
+        "response_time": 32.04245042800903,
+        "success": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=30)",
+        "timestamp": "2025-06-24T14:55:24.988165"
+      },
+      {
+        "request_id": 3,
+        "subject": "Literature",
+        "topic": "Shakespeare",
+        "status_code": 0,
+        "response_time": 33.5269296169281,
+        "success": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out.",
+        "timestamp": "2025-06-24T14:55:26.473426"
+      }
+    ]
+  },
+  {
+    "test_type": "rapid_fire_requests",
+    "total_requests": 15,
+    "successful": 8,
+    "failed": 7,
+    "success_rate": 0.5333333333333333,
+    "total_time": 15.089641809463501,
+    "requests_per_second": 0.9940593812235303,
+    "results": [
+      {
+        "request_id": 0,
+        "type": "financial",
+        "status_code": 200,
+        "response_time": 2.054107189178467,
+        "success": true,
+        "timestamp": "2025-06-24T14:55:28.531114"
+      },
+      {
+        "request_id": 2,
+        "type": "financial",
+        "status_code": 200,
+        "response_time": 2.0728063583374023,
+        "success": true,
+        "timestamp": "2025-06-24T14:55:28.652215"
+      },
+      {
+        "request_id": 4,
+        "type": "financial",
+        "status_code": 200,
+        "response_time": 2.0554120540618896,
+        "success": true,
+        "timestamp": "2025-06-24T14:55:28.737386"
+      },
+      {
+        "request_id": 6,
+        "type": "financial",
+        "status_code": 200,
+        "response_time": 2.0692946910858154,
+        "success": true,
+        "timestamp": "2025-06-24T14:55:28.852184"
+      },
+      {
+        "request_id": 8,
+        "type": "financial",
+        "status_code": 200,
+        "response_time": 2.0564370155334473,
+        "success": true,
+        "timestamp": "2025-06-24T14:55:28.939832"
+      },
+      {
+        "request_id": 10,
+        "type": "financial",
+        "status_code": 200,
+        "response_time": 2.059016466140747,
+        "success": true,
+        "timestamp": "2025-06-24T14:55:31.090696"
+      },
+      {
+        "request_id": 12,
+        "type": "financial",
+        "status_code": 200,
+        "response_time": 2.066516876220703,
+        "success": true,
+        "timestamp": "2025-06-24T14:55:31.404880"
+      },
+      {
+        "request_id": 14,
+        "type": "financial",
+        "status_code": 200,
+        "response_time": 2.061124086380005,
+        "success": true,
+        "timestamp": "2025-06-24T14:55:31.701567"
+      },
+      {
+        "request_id": 1,
+        "type": "lesson",
+        "status_code": 0,
+        "response_time": 12.072891473770142,
+        "success": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+        "timestamp": "2025-06-24T14:55:38.601043"
+      },
+      {
+        "request_id": 3,
+        "type": "lesson",
+        "status_code": 0,
+        "response_time": 12.065728902816772,
+        "success": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+        "timestamp": "2025-06-24T14:55:38.696150"
+      },
+      {
+        "request_id": 5,
+        "type": "lesson",
+        "status_code": 0,
+        "response_time": 12.073373317718506,
+        "success": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+        "timestamp": "2025-06-24T14:55:38.805704"
+      },
+      {
+        "request_id": 7,
+        "type": "lesson",
+        "status_code": 0,
+        "response_time": 12.065415859222412,
+        "success": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+        "timestamp": "2025-06-24T14:55:38.898488"
+      },
+      {
+        "request_id": 9,
+        "type": "lesson",
+        "status_code": 0,
+        "response_time": 12.072887182235718,
+        "success": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+        "timestamp": "2025-06-24T14:55:39.006972"
+      },
+      {
+        "request_id": 11,
+        "type": "lesson",
+        "status_code": 0,
+        "response_time": 12.066950559616089,
+        "success": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+        "timestamp": "2025-06-24T14:55:41.270040"
+      },
+      {
+        "request_id": 13,
+        "type": "lesson",
+        "status_code": 0,
+        "response_time": 12.061299085617065,
+        "success": false,
+        "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+        "timestamp": "2025-06-24T14:55:41.564074"
+      }
+    ]
+  }
+]

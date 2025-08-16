@@ -1,0 +1,38 @@
+{
+  "user_id": "student_12345",
+  "report_type": "progress_report",
+  "context": "edumentor",
+  "language": "hi",
+  "data": {
+    "completed_modules": 7,
+    "total_modules": 10,
+    "average_score": 78,
+    "current_score": 82,
+    "subject_area": "गणित और विज्ञान",
+    "weak_areas": "बीजगणित, ज्यामिति",
+    "strong_areas": "अंकगणित, सांख्यिकी",
+    "engagement_score": 65,
+    "missed_quizzes": 2,
+    "streak_days": 5,
+    "time_spent_minutes": 450,
+    "last_activity": "2024-01-15T10:30:00Z",
+    "difficulty_level": "intermediate",
+    "learning_style": "visual",
+    "goals": {
+      "target_score": 85,
+      "target_completion": "2024-02-15"
+    },
+    "recent_performance": [
+      {"date": "2024-01-10", "score": 75},
+      {"date": "2024-01-12", "score": 80},
+      {"date": "2024-01-14", "score": 82}
+    ]
+  },
+  "override_thresholds": false,
+  "threshold_overrides": {},
+  "metadata": {
+    "source": "edumentor_app",
+    "version": "1.2.3",
+    "request_id": "req_edu_001"
+  }
+}

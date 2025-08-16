@@ -1,0 +1,17 @@
+{
+  "subject": "maths",
+  "topic": "triangles",
+  "wikipedia": {
+    "title": "Magic triangle (mathematics)",
+    "summary": "A magic triangle is a magic arrangement of the integers from 1 to n in a triangular figure.\n\n",
+    "content": "A magic triangle is a magic arrangement of the integers from 1 to n in a triangular figure.\n\n\n== Perimeter magic triangle ==\nA magic triangle or perimeter magic triangle is an arrangement of the integers from 1 to n on the sides of a triangle with the same number of integers on each side, called the order of the triangle, so that the sum of integers on each side is a constant, the magic sum of the triangle. Unlike magic squares, there are different magic sums for magic triangles of the same order. Any magic triangle has a complementary triangle obtained by replacing each integer x in the triangle with 1 + n − x.\n\n\n=== Examples ===\n\nOrder 3 magic triangles are the simplest (except for trivial magic triangles of order 2).\n\n\n== Other magic triangles ==\nOther magic triangles use a triangular number or square number of vertices to form magic figure. Matthew Wright and his students in St. Olaf College developed magic triangles with square numbers. In their magic triangles, the sum of the kth row and the (n - k + 1)th row is same for all k \n(sequence A356808 in the OEIS). Its one modification uses triangular numbers instead of square numbers (sequence A355119 in the OEIS). Another magic triangle form is magic triangles with triangular numbers with different summation. In this magic triangle, the sum of the kth row and the (n - k)th row is the same for all k (sequence A356643 in the OEIS).\nAnother magic triangle form is magic triangles with square numbers with different summation. In this triangle, the sum of the 2×2 subtriangles is the same for all subtriangles (sequence A375416 in the OEIS).\nGeneralized perimeter-magic types are defined which do not require a consecutive set of integers starting at 1 along the sides OEIS: A380853, OEIS: A380105.\n\n\n== See also ==\nAntimagic square\nMagic polygon\n\n\n== References ==",
+    "url": "https://en.wikipedia.org/wiki/Magic_triangle_(mathematics)",
+    "related_articles": [
+      "Congruence (geometry)",
+      "Degeneracy (mathematics)",
+      "Incircle and excircles",
+      "Triangle center"
+    ]
+  },
+  "timestamp": 1751689216.0392919
+}

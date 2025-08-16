@@ -1,0 +1,31 @@
+{
+  "subject": "science",
+  "topic": "physics",
+  "title": "The science of the self: An ancient journey through duality and atomism",
+  "shloka": "Dhikara Praman Kama Samadhi Parman Vargam",
+  "translation": "The science of the self, the soul's state, in the realm of cosmic truth.",
+  "explanation": "Physics is rooted in ancient Indian wisdom through concepts like atomism and vedic cosmology. The concept of duality in physics mirrors Yajurvedi's views on reality, while energy conservation teaches us about matter and its transformation. Ancient texts like the *Kamya Samadhi* highlight the self and its role in the universe, influencing modern understanding of quantum mechanics and relativity.",
+  "activity": "Students will create a simple atom model using playing cards to visualize subatomic particles and their interactions.",
+  "question": "How does our understanding of physics today reflect ancient philosophical concepts about the nature of reality?",
+  "wikipedia_info": {
+    "title": "Engineering physics",
+    "summary": "Engineering physics (EP), sometimes engineering science, is the field of study combining pure science disciplines (such as physics, mathematics, chemistry or biology) and engineering disciplines (computer, nuclear, electrical, aerospace, medical, materials, mechanical, etc.).\nIn many languages, the term technical physics is also used.\nIt has been used since 1861 by the German physics teacher J. Frick in his publications.\n\n",
+    "url": "https://en.wikipedia.org/wiki/Engineering_physics",
+    "related_articles": [
+      "Physics",
+      "Scientific law",
+      "Inspec",
+      "Branches of science"
+    ]
+  },
+  "sources": [
+    "Ollama (deepseek-r1:1.5b)"
+  ],
+  "wikipedia_summary": "Engineering physics (EP), sometimes engineering science, is the field of study combining pure science disciplines (such as physics, mathematics, chemistry or biology) and engineering disciplines (computer, nuclear, electrical, aerospace, medical, materials, mechanical, etc.).",
+  "metadata": {
+    "timestamp": 1752319931.8765619,
+    "date_created": "2025-07-12T17:02:11.876564",
+    "version": "1.0",
+    "last_updated": "2025-07-12T17:02:11.876571"
+  }
+}

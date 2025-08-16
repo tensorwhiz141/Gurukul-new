@@ -1,0 +1,111 @@
+{
+  "session_id": "sim-123456",
+  "timestamp": "2023-06-15T10:00:00Z",
+  "user_id": "user-789",
+  "interactions": [
+    {
+      "id": 1,
+      "timestamp": "2023-06-15T10:01:00Z",
+      "agent_type": "financial",
+      "query": "How should I invest my savings?",
+      "response": "Based on your risk profile, I recommend a mix of 60% index funds, 30% bonds, and 10% cash reserves.",
+      "confidence": 0.87,
+      "tags": ["risk", "investment"],
+      "feedback": {
+        "rating": 4,
+        "comment": "Very helpful advice, but I'd like more specific fund recommendations."
+      }
+    },
+    {
+      "id": 2,
+      "timestamp": "2023-06-15T10:03:00Z",
+      "agent_type": "education",
+      "query": "Explain the Pythagorean theorem",
+      "response": "The Pythagorean theorem states that in a right triangle, the square of the hypotenuse equals the sum of squares of the other two sides: a² + b² = c².",
+      "confidence": 0.95,
+      "tags": ["math", "geometry"],
+      "feedback": {
+        "rating": 5,
+        "comment": "Perfect explanation, very clear!"
+      }
+    },
+    {
+      "id": 3,
+      "timestamp": "2023-06-15T10:05:00Z",
+      "agent_type": "wellness",
+      "query": "What's a good morning routine for energy?",
+      "response": "Start with 5 minutes of stretching, drink a glass of water, have a protein-rich breakfast, and get 10 minutes of sunlight for optimal energy levels.",
+      "confidence": 0.82,
+      "tags": ["health", "routine"],
+      "feedback": {
+        "rating": 3,
+        "comment": "Good general advice, but I was hoping for more personalized recommendations."
+      }
+    },
+    {
+      "id": 4,
+      "timestamp": "2023-06-15T10:08:00Z",
+      "agent_type": "financial",
+      "query": "How much should I save for retirement?",
+      "response": "A good rule of thumb is to save 15% of your pre-tax income for retirement. However, this can vary based on your age, current savings, and retirement goals. If you're starting later, you might need to save 20-25%.",
+      "confidence": 0.91,
+      "tags": ["retirement", "planning"],
+      "feedback": {
+        "rating": 5,
+        "comment": "This is exactly what I needed to know!"
+      }
+    },
+    {
+      "id": 5,
+      "timestamp": "2023-06-15T10:12:00Z",
+      "agent_type": "education",
+      "query": "How do I solve quadratic equations?",
+      "response": "Quadratic equations can be solved using the quadratic formula: x = (-b ± √(b² - 4ac)) / 2a, where ax² + bx + c = 0. You can also use factoring or completing the square methods depending on the equation.",
+      "confidence": 0.89,
+      "tags": ["math", "algebra"],
+      "feedback": {
+        "rating": 4,
+        "comment": "Good explanation, but an example would have been helpful."
+      }
+    },
+    {
+      "id": 6,
+      "timestamp": "2023-06-15T10:15:00Z",
+      "agent_type": "wellness",
+      "query": "How can I reduce stress at work?",
+      "response": "To reduce work stress: 1) Take short breaks every 90 minutes, 2) Practice deep breathing when feeling overwhelmed, 3) Prioritize tasks with a to-do list, 4) Set boundaries between work and personal time, 5) Consider mindfulness meditation for 10 minutes daily.",
+      "confidence": 0.88,
+      "tags": ["stress", "workplace"],
+      "feedback": {
+        "rating": 5,
+        "comment": "These are practical tips I can implement right away. Thank you!"
+      }
+    },
+    {
+      "id": 7,
+      "timestamp": "2023-06-15T10:20:00Z",
+      "agent_type": "financial",
+      "query": "Should I pay off debt or invest?",
+      "response": "Compare your debt interest rates to potential investment returns. Generally, pay off high-interest debt (>6%) first, then invest. For low-interest debt, you might do both simultaneously. Always maintain an emergency fund regardless of your choice.",
+      "confidence": 0.85,
+      "tags": ["debt", "investment", "planning"],
+      "feedback": {
+        "rating": 4,
+        "comment": "Solid advice with good reasoning behind it."
+      }
+    },
+    {
+      "id": 8,
+      "timestamp": "2023-06-15T10:25:00Z",
+      "agent_type": "education",
+      "query": "What are the main themes in Shakespeare's Hamlet?",
+      "response": "Key themes in Hamlet include: 1) Revenge and its consequences, 2) Mortality and the meaning of life, 3) Appearance vs. reality, 4) Madness (real and feigned), 5) Corruption and its spread, and 6) The complexity of action versus inaction.",
+      "confidence": 0.92,
+      "tags": ["literature", "analysis"],
+      "feedback": {
+        "rating": 5,
+        "comment": "Comprehensive overview of the major themes. This helped with my essay!"
+      }
+    }
+  ]
+}

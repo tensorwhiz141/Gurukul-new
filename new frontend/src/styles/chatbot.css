@@ -1,0 +1,468 @@
+/* Custom scrollbar styles for the chatbot */
+.chat-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* Line clamp utility for text truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.chat-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: transparent;
+}
+
+.chat-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Message animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-animation {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Typing indicator animation */
+@keyframes blink {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  margin: 0 2px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1.4s infinite both;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Paperclip icon animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.paperclip-icon {
+  transition: all 0.2s ease;
+}
+
+.paperclip-icon:hover {
+  color: #ff9933;
+  animation: pulse 1s infinite;
+}
+
+/* Textarea styling */
+.chatbot-textarea {
+  font-family: "Nunito", sans-serif;
+  transition: height 0.2s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+  overscroll-behavior: contain;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+}
+
+/* Custom scrollbar for textarea */
+.chatbot-textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbot-textarea::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.chatbot-textarea::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.chatbot-textarea::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 153, 51, 0.3);
+}
+
+/* Textarea styling for chatbot */
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  font-family: "Nunito", sans-serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  height: 46px !important; /* Force fixed height */
+  max-width: 100%;
+}
+
+/* Custom scrollbar for textarea */
+textarea::-webkit-scrollbar {
+  width: 4px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 153, 51, 0.3);
+}
+
+/* Ensure the textarea container doesn't expand */
+.flex-grow.min-w-0 {
+  max-width: calc(100% - 140px); /* Account for buttons */
+  overflow: hidden;
+}
+
+/* Message bubble styling */
+.message-animation {
+  width: 100%;
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Force text wrapping in message bubbles */
+.message-animation p {
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: pre-wrap !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+/* Ensure message containers don't expand */
+.max-w-3xl {
+  max-width: min(100%, 48rem) !important;
+  width: auto !important;
+}
+
+/* Twemoji styling for better emoji appearance */
+.twemoji {
+  height: 1.2em;
+  width: 1.2em;
+  margin: 0 0.1em;
+  vertical-align: -0.1em;
+  display: inline-block;
+}
+
+/* Ensure Twemoji emojis are properly sized and aligned */
+img.emoji {
+  height: 1.2em;
+  width: 1.2em;
+  margin: 0 0.1em;
+  vertical-align: -0.1em;
+  display: inline-block;
+}
+
+/* Enhanced message animations */
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.message-animation.user-message {
+  animation: slideInFromRight 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.message-animation.assistant-message {
+  animation: slideInFromBottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Enhanced typing indicator */
+@keyframes typingPulse {
+  0%, 60%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  30% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.typing-indicator span {
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  background: linear-gradient(135deg, #FF9933, #FFB366);
+  border-radius: 50%;
+  display: inline-block;
+  animation: typingPulse 1.6s infinite ease-in-out;
+  box-shadow: 0 2px 4px rgba(255, 153, 51, 0.3);
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Message bubble enhancements */
+.message-bubble {
+  position: relative;
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease;
+}
+
+.message-bubble:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.message-bubble.user-bubble {
+  background: linear-gradient(135deg, rgba(255, 153, 51, 0.25), rgba(255, 153, 51, 0.15));
+  border: 1px solid rgba(255, 153, 51, 0.3);
+}
+
+.message-bubble.assistant-bubble {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.message-bubble.error-bubble {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.1));
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Chat input enhancements */
+.chat-input-container {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.chat-input-container:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 153, 51, 0.2);
+}
+
+/* Model selector enhancements */
+.model-selector {
+  position: relative;
+  overflow: hidden;
+}
+
+.model-selector::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 153, 51, 0.1), rgba(255, 153, 51, 0.05));
+  border-radius: inherit;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.model-selector:hover::before {
+  opacity: 1;
+}
+
+/* Chat history controls */
+.chat-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chat-control-btn {
+  position: relative;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.chat-control-btn:hover {
+  background: rgba(255, 153, 51, 0.2);
+  border-color: rgba(255, 153, 51, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 153, 51, 0.2);
+}
+
+.chat-control-btn:active {
+  transform: translateY(0);
+}
+
+/* Modal enhancements */
+.chat-modal {
+  backdrop-filter: blur(20px);
+  animation: modalFadeIn 0.3s ease-out forwards;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.chat-modal-content {
+  animation: modalSlideIn 0.3s ease-out forwards;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading state enhancements */
+.chat-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px;
+}
+
+.chat-loading .typing-indicator {
+  scale: 1.5;
+}
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+  .chat-controls {
+    gap: 4px;
+  }
+
+  .chat-control-btn {
+    padding: 6px;
+  }
+
+  .message-bubble {
+    margin: 0 8px;
+  }
+
+  .chat-input-container {
+    margin: 0 8px;
+  }
+}
+
+/* Accessibility enhancements */
+.chat-control-btn:focus {
+  outline: 2px solid rgba(255, 153, 51, 0.5);
+  outline-offset: 2px;
+}
+
+.message-bubble:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for chat container */
+.chat-scrollbar {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced message timestamp */
+.message-timestamp {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.message-bubble:hover .message-timestamp {
+  opacity: 0.8;
+}

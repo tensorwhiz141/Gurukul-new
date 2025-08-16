@@ -1,0 +1,54 @@
+{
+  "test_timestamp": "2025-06-24T15:00:50.914874",
+  "services": {
+    "financial_simulator": {
+      "status": "operational",
+      "health_check": 200,
+      "simulation_start": 200,
+      "status_check": 200,
+      "task_id": "fd713b66-2857-459f-8b60-ff97c27af1e0",
+      "response_data": {
+        "status": "success",
+        "task_status": "queued",
+        "task_details": {
+          "status": "queued",
+          "user_id": "integration-test-user",
+          "user_name": "Integration Test User",
+          "created_at": 269731.0581179
+        }
+      }
+    },
+    "memory_management": {
+      "status": "partial",
+      "health_check": 200,
+      "retrieve_error": "{\"detail\":\"Method Not Allowed\"}"
+    },
+    "api_data_service": {
+      "status": "operational",
+      "health_check": 200
+    }
+  },
+  "integrations": {
+    "complete_workflow": {
+      "status": "success",
+      "steps_completed": 4,
+      "task_id": "f712133d-3bd2-43d1-b575-08591ccc7256",
+      "workflow_data": {
+        "user_id": "workflow-test-user",
+        "user_name": "Workflow Test User",
+        "income": 85000,
+        "expenses": [
+          {
+            "name": "Housing",
+            "amount": 2500
+          }
+        ],
+        "total_expenses": 2500,
+        "goal": "Complete workflow integration test",
+        "financial_type": "aggressive",
+        "risk_level": "high"
+      }
+    }
+  },
+  "api_flows": []
+}

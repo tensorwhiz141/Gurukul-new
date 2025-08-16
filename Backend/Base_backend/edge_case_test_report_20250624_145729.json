@@ -1,0 +1,602 @@
+{
+  "test_execution": {
+    "start_time": 1750757090.4456868,
+    "end_time": 1750757249.2718587,
+    "total_time": 158.826171875,
+    "timestamp": "2025-06-24T14:57:29.278667"
+  },
+  "test_results": {
+    "bursty_workloads": {
+      "status": "completed",
+      "results": [
+        {
+          "test_type": "concurrent_financial_simulations",
+          "total_requests": 5,
+          "successful": 5,
+          "failed": 0,
+          "success_rate": 1.0,
+          "total_time": 2.498663902282715,
+          "results": [
+            {
+              "user_id": 4,
+              "status_code": 200,
+              "response_time": 2.488358736038208,
+              "success": true,
+              "timestamp": "2025-06-24T14:54:52.936585",
+              "task_id": "636cd940-5061-42e7-9b59-96521edd145e",
+              "message": "Simulation started"
+            },
+            {
+              "user_id": 0,
+              "status_code": 200,
+              "response_time": 2.4917585849761963,
+              "success": true,
+              "timestamp": "2025-06-24T14:54:52.937875",
+              "task_id": "9e73ed61-937a-4d06-9dd2-ccc52d2b2e18",
+              "message": "Simulation started"
+            },
+            {
+              "user_id": 2,
+              "status_code": 200,
+              "response_time": 2.493642807006836,
+              "success": true,
+              "timestamp": "2025-06-24T14:54:52.940358",
+              "task_id": "667a89bf-1d3f-452f-8efd-b0687cccde7e",
+              "message": "Simulation started"
+            },
+            {
+              "user_id": 1,
+              "status_code": 200,
+              "response_time": 2.4958696365356445,
+              "success": true,
+              "timestamp": "2025-06-24T14:54:52.942352",
+              "task_id": "051187bf-54ea-45fc-93f8-d8f9a9ee4a69",
+              "message": "Simulation started"
+            },
+            {
+              "user_id": 3,
+              "status_code": 200,
+              "response_time": 2.4967222213745117,
+              "success": true,
+              "timestamp": "2025-06-24T14:54:52.944207",
+              "task_id": "d7e63f2f-2772-40bb-a0e4-0354263d822b",
+              "message": "Simulation started"
+            }
+          ]
+        },
+        {
+          "test_type": "concurrent_lesson_generation",
+          "total_requests": 4,
+          "successful": 1,
+          "failed": 3,
+          "success_rate": 0.25,
+          "total_time": 33.52952718734741,
+          "results": [
+            {
+              "request_id": 1,
+              "subject": "Science",
+              "topic": "Physics",
+              "status_code": 200,
+              "response_time": 3.5253262519836426,
+              "success": true,
+              "timestamp": "2025-06-24T14:54:56.470782",
+              "task_id": "88f911bd-2030-4609-9bcc-3f9684329c54",
+              "status": "pending"
+            },
+            {
+              "request_id": 0,
+              "subject": "Mathematics",
+              "topic": "Algebra",
+              "status_code": 0,
+              "response_time": 32.027618169784546,
+              "success": false,
+              "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=30)",
+              "timestamp": "2025-06-24T14:55:24.972743"
+            },
+            {
+              "request_id": 2,
+              "subject": "History",
+              "topic": "World War II",
+              "status_code": 0,
+              "response_time": 32.04245042800903,
+              "success": false,
+              "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=30)",
+              "timestamp": "2025-06-24T14:55:24.988165"
+            },
+            {
+              "request_id": 3,
+              "subject": "Literature",
+              "topic": "Shakespeare",
+              "status_code": 0,
+              "response_time": 33.5269296169281,
+              "success": false,
+              "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out.",
+              "timestamp": "2025-06-24T14:55:26.473426"
+            }
+          ]
+        },
+        {
+          "test_type": "rapid_fire_requests",
+          "total_requests": 15,
+          "successful": 8,
+          "failed": 7,
+          "success_rate": 0.5333333333333333,
+          "total_time": 15.089641809463501,
+          "requests_per_second": 0.9940593812235303,
+          "results": [
+            {
+              "request_id": 0,
+              "type": "financial",
+              "status_code": 200,
+              "response_time": 2.054107189178467,
+              "success": true,
+              "timestamp": "2025-06-24T14:55:28.531114"
+            },
+            {
+              "request_id": 2,
+              "type": "financial",
+              "status_code": 200,
+              "response_time": 2.0728063583374023,
+              "success": true,
+              "timestamp": "2025-06-24T14:55:28.652215"
+            },
+            {
+              "request_id": 4,
+              "type": "financial",
+              "status_code": 200,
+              "response_time": 2.0554120540618896,
+              "success": true,
+              "timestamp": "2025-06-24T14:55:28.737386"
+            },
+            {
+              "request_id": 6,
+              "type": "financial",
+              "status_code": 200,
+              "response_time": 2.0692946910858154,
+              "success": true,
+              "timestamp": "2025-06-24T14:55:28.852184"
+            },
+            {
+              "request_id": 8,
+              "type": "financial",
+              "status_code": 200,
+              "response_time": 2.0564370155334473,
+              "success": true,
+              "timestamp": "2025-06-24T14:55:28.939832"
+            },
+            {
+              "request_id": 10,
+              "type": "financial",
+              "status_code": 200,
+              "response_time": 2.059016466140747,
+              "success": true,
+              "timestamp": "2025-06-24T14:55:31.090696"
+            },
+            {
+              "request_id": 12,
+              "type": "financial",
+              "status_code": 200,
+              "response_time": 2.066516876220703,
+              "success": true,
+              "timestamp": "2025-06-24T14:55:31.404880"
+            },
+            {
+              "request_id": 14,
+              "type": "financial",
+              "status_code": 200,
+              "response_time": 2.061124086380005,
+              "success": true,
+              "timestamp": "2025-06-24T14:55:31.701567"
+            },
+            {
+              "request_id": 1,
+              "type": "lesson",
+              "status_code": 0,
+              "response_time": 12.072891473770142,
+              "success": false,
+              "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+              "timestamp": "2025-06-24T14:55:38.601043"
+            },
+            {
+              "request_id": 3,
+              "type": "lesson",
+              "status_code": 0,
+              "response_time": 12.065728902816772,
+              "success": false,
+              "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+              "timestamp": "2025-06-24T14:55:38.696150"
+            },
+            {
+              "request_id": 5,
+              "type": "lesson",
+              "status_code": 0,
+              "response_time": 12.073373317718506,
+              "success": false,
+              "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+              "timestamp": "2025-06-24T14:55:38.805704"
+            },
+            {
+              "request_id": 7,
+              "type": "lesson",
+              "status_code": 0,
+              "response_time": 12.065415859222412,
+              "success": false,
+              "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+              "timestamp": "2025-06-24T14:55:38.898488"
+            },
+            {
+              "request_id": 9,
+              "type": "lesson",
+              "status_code": 0,
+              "response_time": 12.072887182235718,
+              "success": false,
+              "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+              "timestamp": "2025-06-24T14:55:39.006972"
+            },
+            {
+              "request_id": 11,
+              "type": "lesson",
+              "status_code": 0,
+              "response_time": 12.066950559616089,
+              "success": false,
+              "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+              "timestamp": "2025-06-24T14:55:41.270040"
+            },
+            {
+              "request_id": 13,
+              "type": "lesson",
+              "status_code": 0,
+              "response_time": 12.061299085617065,
+              "success": false,
+              "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)",
+              "timestamp": "2025-06-24T14:55:41.564074"
+            }
+          ]
+        }
+      ],
+      "timestamp": "2025-06-24T14:55:41.570645"
+    },
+    "high_latency": {
+      "status": "completed",
+      "results": [
+        {
+          "task_id": "f7f940e9-4c17-46bf-9c01-bfef02ea6dd1",
+          "task_type": "financial_simulation",
+          "status": "completed",
+          "total_time": 0.0004241466522216797,
+          "poll_count": 1,
+          "status_history": [
+            {
+              "poll_count": 1,
+              "elapsed_time": 0.0004241466522216797,
+              "status": "success",
+              "timestamp": "2025-06-24T14:55:45.675648",
+              "response_time": 2.043144
+            }
+          ],
+          "results_available": true,
+          "results_data": {
+            "status": "success",
+            "ready": false,
+            "message": "No simulation results available yet.",
+            "task_id": "f7f940e9-4c17-46bf-9c01-bfef02ea6dd1",
+            "task_status": "queued",
+            "user_id": "high-latency-financial-test",
+            "data": {
+              "simulated_cashflow": [],
+              "discipline_report": [],
+              "goal_status": [],
+              "behavior_tracker": [],
+              "karmic_tracker": [],
+              "financial_strategy": [],
+              "person_history": [],
+              "monthly_reflections": []
+            },
+            "source": "mongodb"
+          }
+        },
+        {
+          "scenario": "Invalid Financial Simulator Port",
+          "status": "connection_refused",
+          "response_time": 4.107737064361572
+        },
+        {
+          "scenario": "Invalid Lesson Generator Port",
+          "status": "connection_refused",
+          "response_time": 4.094969749450684
+        }
+      ],
+      "timestamp": "2025-06-24T14:56:27.987233"
+    },
+    "network_connectivity": {
+      "status": "completed",
+      "results": [
+        {
+          "test_type": "intermittent_connectivity",
+          "total_requests": 8,
+          "results": [
+            {
+              "request_id": 0,
+              "status": "success",
+              "status_code": 200,
+              "response_time": 2.03895902633667,
+              "network_delay": 1.6590248534751293,
+              "timestamp": "2025-06-24T14:56:31.686543"
+            },
+            {
+              "request_id": 1,
+              "status": "success",
+              "status_code": 200,
+              "response_time": 2.052706718444824,
+              "network_delay": 1.5670224524126648,
+              "timestamp": "2025-06-24T14:56:35.307596"
+            },
+            {
+              "request_id": 2,
+              "status": "success",
+              "status_code": 200,
+              "response_time": 2.058990478515625,
+              "network_delay": 0.4038607490787709,
+              "timestamp": "2025-06-24T14:56:37.772013"
+            },
+            {
+              "request_id": 3,
+              "status": "success",
+              "status_code": 200,
+              "response_time": 2.049480676651001,
+              "network_delay": 1.8266796576675233,
+              "timestamp": "2025-06-24T14:56:41.649527"
+            },
+            {
+              "request_id": 4,
+              "status": "simulated_network_failure",
+              "network_delay": 1.7093723444055302,
+              "timestamp": "2025-06-24T14:56:43.360058"
+            },
+            {
+              "request_id": 5,
+              "status": "success",
+              "status_code": 200,
+              "response_time": 2.049475908279419,
+              "network_delay": 1.9754624306776958,
+              "timestamp": "2025-06-24T14:56:47.386548"
+            },
+            {
+              "request_id": 6,
+              "status": "success",
+              "status_code": 200,
+              "response_time": 2.0558223724365234,
+              "network_delay": 0.5761679518140128,
+              "timestamp": "2025-06-24T14:56:50.019585"
+            },
+            {
+              "request_id": 7,
+              "status": "success",
+              "status_code": 200,
+              "response_time": 2.0667574405670166,
+              "network_delay": 1.741229813067094,
+              "timestamp": "2025-06-24T14:56:53.828818"
+            }
+          ],
+          "summary": {
+            "successful": 7,
+            "timeouts": 0,
+            "connection_errors": 0,
+            "simulated_failures": 1
+          }
+        },
+        {
+          "test_type": "api_endpoint_failures",
+          "results": [
+            {
+              "test_name": "Financial Simulator Unavailable - Primary",
+              "url": "http://localhost:8002/start-simulation",
+              "status": "unexpected_success",
+              "status_code": 200,
+              "response_time": 2.0523629188537598,
+              "timestamp": "2025-06-24T14:56:55.884996"
+            },
+            {
+              "test_name": "Financial Simulator Unavailable - Backup",
+              "url": "http://localhost:8001/start-simulation",
+              "status": "unexpected_success",
+              "status_code": 404,
+              "response_time": 2.042436122894287,
+              "timestamp": "2025-06-24T14:56:57.928068"
+            },
+            {
+              "test_name": "Lesson Generator Unavailable - Primary",
+              "url": "http://localhost:8000/lessons",
+              "status": "timeout",
+              "response_time": 5.0571653842926025,
+              "timestamp": "2025-06-24T14:57:02.986261"
+            },
+            {
+              "test_name": "Lesson Generator Unavailable - Backup",
+              "url": "http://localhost:8001/lessons",
+              "status": "unexpected_success",
+              "status_code": 404,
+              "response_time": 2.0380377769470215,
+              "timestamp": "2025-06-24T14:57:05.024430"
+            }
+          ]
+        },
+        {
+          "test_type": "partial_data_corruption",
+          "results": [
+            {
+              "scenario": "Missing Required Fields",
+              "status": "expected_validation_error",
+              "status_code": 422,
+              "response_time": 2.032017946243286,
+              "timestamp": "2025-06-24T14:57:07.056923",
+              "response_data": {
+                "detail": [
+                  {
+                    "type": "missing",
+                    "loc": [
+                      "body",
+                      "user_name"
+                    ],
+                    "msg": "Field required",
+                    "input": {
+                      "user_id": "corruption-test",
+                      "goal": "Test missing fields"
+                    }
+                  },
+                  {
+                    "type": "missing",
+                    "loc": [
+                      "body",
+                      "income"
+                    ],
+                    "msg": "Field required",
+                    "input": {
+                      "user_id": "corruption-test",
+                      "goal": "Test missing fields"
+                    }
+                  },
+                  {
+                    "type": "missing",
+                    "loc": [
+                      "body",
+                      "expenses"
+                    ],
+                    "msg": "Field required",
+                    "input": {
+                      "user_id": "corruption-test",
+                      "goal": "Test missing fields"
+                    }
+                  },
+                  {
+                    "type": "missing",
+                    "loc": [
+                      "body",
+                      "total_expenses"
+                    ],
+                    "msg": "Field required",
+                    "input": {
+                      "user_id": "corruption-test",
+                      "goal": "Test missing fields"
+                    }
+                  },
+                  {
+                    "type": "missing",
+                    "loc": [
+                      "body",
+                      "financial_type"
+                    ],
+                    "msg": "Field required",
+                    "input": {
+                      "user_id": "corruption-test",
+                      "goal": "Test missing fields"
+                    }
+                  },
+                  {
+                    "type": "missing",
+                    "loc": [
+                      "body",
+                      "risk_level"
+                    ],
+                    "msg": "Field required",
+                    "input": {
+                      "user_id": "corruption-test",
+                      "goal": "Test missing fields"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "scenario": "Invalid Data Types",
+              "status": "expected_validation_error",
+              "status_code": 422,
+              "response_time": 2.033242702484131,
+              "timestamp": "2025-06-24T14:57:09.091027",
+              "response_data": {
+                "detail": [
+                  {
+                    "type": "float_parsing",
+                    "loc": [
+                      "body",
+                      "income"
+                    ],
+                    "msg": "Input should be a valid number, unable to parse string as a number",
+                    "input": "not_a_number"
+                  },
+                  {
+                    "type": "list_type",
+                    "loc": [
+                      "body",
+                      "expenses"
+                    ],
+                    "msg": "Input should be a valid list",
+                    "input": "not_an_array"
+                  },
+                  {
+                    "type": "float_type",
+                    "loc": [
+                      "body",
+                      "total_expenses"
+                    ],
+                    "msg": "Input should be a valid number",
+                    "input": null
+                  },
+                  {
+                    "type": "string_type",
+                    "loc": [
+                      "body",
+                      "financial_type"
+                    ],
+                    "msg": "Input should be a valid string",
+                    "input": 123
+                  },
+                  {
+                    "type": "string_type",
+                    "loc": [
+                      "body",
+                      "risk_level"
+                    ],
+                    "msg": "Input should be a valid string",
+                    "input": []
+                  }
+                ]
+              }
+            },
+            {
+              "scenario": "Extremely Large Values",
+              "status": "unexpected_success",
+              "status_code": 200,
+              "response_time": 2.042637825012207,
+              "timestamp": "2025-06-24T14:57:11.133892",
+              "response_data": {
+                "status": "success",
+                "message": "Simulation started",
+                "task_id": "cb8d771e-36fe-4546-9784-8eb524606f61"
+              }
+            },
+            {
+              "scenario": "Malformed JSON Structure",
+              "status": "timeout",
+              "response_time": 12.03324842453003,
+              "timestamp": "2025-06-24T14:57:23.167588"
+            }
+          ]
+        },
+        {
+          "test_type": "browser_refresh_simulation",
+          "task_id": "68d4877c-0152-46e8-b0e3-adce772ec89c",
+          "status": "task_persistent",
+          "task_status": "success",
+          "timestamp": "2025-06-24T14:57:29.264461"
+        }
+      ],
+      "timestamp": "2025-06-24T14:57:29.271437"
+    }
+  },
+  "summary": {
+    "total_test_suites": 3,
+    "completed_tests": 3,
+    "failed_tests": 0
+  }
+}

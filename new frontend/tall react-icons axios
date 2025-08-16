@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+html {
+  overflow-y: auto;
+}
+
+/* Desktop view - no scrolling */
+@media (min-width: 768px) {
+  html,
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+/* Mobile view - allow scrolling */
+@media (max-width: 767px) {
+  html,
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Nunito", sans-serif;
+  background-color: #fdf6e3;
+  color: #5d001e;
+  background-image: url("/bg/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Ensure smooth transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+footer {
+  display: none !important;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.35);
+}
+
+/* Glassmorphism card style (from CodePen LNEQod) */
+.glass-card {
+  background: rgba(30, 30, 40, 0.25);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3),
+    0 1px 12px 0 rgba(255, 215, 0, 0.15) inset;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2.5rem 2rem;
+  transition: all 0.3s ease;
+  max-width: 95%;
+  width: 460px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.glass-card:hover {
+  box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.4),
+    0 1px 16px 0 rgba(255, 215, 0, 0.15) inset;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 640px) {
+  .glass-card {
+    padding: 2rem 1.5rem;
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}
+
+/* Global button hover scale */
+button {
+  transition: transform 0.2s ease-in-out;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Disable hover scale for buttons with no-scale */
+.no-scale:hover {
+  transform: none !important;
+}

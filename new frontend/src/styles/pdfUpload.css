@@ -1,0 +1,82 @@
+/* PDF Upload Styles */
+.pdf-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.pdf-item:hover {
+  transform: translateY(-1px);
+}
+
+.pdf-item.active {
+  box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.5),
+    0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+.pdf-upload-icon {
+  transition: all 0.2s ease-in-out;
+}
+
+.pdf-upload-icon:hover {
+  transform: scale(1.1);
+  color: rgba(139, 92, 246, 0.9) !important;
+}
+
+.pdf-upload-area {
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 92, 246, 0.5) rgba(0, 0, 0, 0.1);
+}
+
+.pdf-upload-area::-webkit-scrollbar {
+  height: 4px;
+}
+
+.pdf-upload-area::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.pdf-upload-area::-webkit-scrollbar-thumb {
+  background-color: rgba(139, 92, 246, 0.5);
+  border-radius: 4px;
+}
+
+.pdf-upload-area::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(139, 92, 246, 0),
+    rgba(139, 92, 246, 0.3),
+    rgba(139, 92, 246, 0)
+  );
+}
+
+/* Animation for PDF upload */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pdf-item {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Remove button hover effect */
+.pdf-remove-button {
+  transition: all 0.15s ease-in-out;
+}
+
+.pdf-remove-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}

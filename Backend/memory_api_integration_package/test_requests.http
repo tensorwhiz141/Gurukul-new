@@ -1,0 +1,374 @@
+###
+# Memory Management API - Test Requests
+# Use this file with REST Client extension in VS Code or import into Postman
+# Update the @baseUrl and @apiKey variables for your environment
+###
+
+@baseUrl = http://localhost:8003
+@apiKey = memory_api_key_dev
+@userId = test_user_123
+@personaId = financial_advisor
+
+### Variables for testing
+@sessionId = session_{{$timestamp}}
+@testMemoryId = 550e8400-e29b-41d4-a716-446655440000
+
+###
+# 1. HEALTH CHECK
+###
+
+### Check API Health
+GET {{baseUrl}}/memory/health
+Content-Type: application/json
+
+###
+# 2. MEMORY STORAGE
+###
+
+### Store User Preference Memory
+POST {{baseUrl}}/memory
+Authorization: Bearer {{apiKey}}
+Content-Type: application/json
+
+{
+  "user_id": "{{userId}}",
+  "persona_id": "{{personaId}}",
+  "content": "User prefers conservative investment strategies with low risk tolerance and focus on long-term growth",
+  "content_type": "preference",
+  "metadata": {
+    "tags": ["investment", "conservative", "low-risk", "long-term"],
+    "importance": 8,
+    "topic": "investment_strategy",
+    "context_type": "user_preference",
+    "source": "user_input",
+    "confidence": 0.95
+  }
+}
+
+### Store User Fact Memory
+POST {{baseUrl}}/memory
+Authorization: Bearer {{apiKey}}
+Content-Type: application/json
+
+{
+  "user_id": "{{userId}}",
+  "persona_id": "{{personaId}}",
+  "content": "User has monthly income of $5000, monthly expenses of $3500, and wants to save $1000 per month for retirement",
+  "content_type": "fact",
+  "metadata": {
+    "tags": ["income", "expenses", "savings", "retirement"],
+    "importance": 9,
+    "topic": "financial_profile",
+    "context_type": "financial_data",
+    "source": "user_input",
+    "confidence": 1.0
+  }
+}
+
+### Store User-Agent Interaction
+POST {{baseUrl}}/memory/interaction
+Authorization: Bearer {{apiKey}}
+Content-Type: application/json
+
+{
+  "user_id": "{{userId}}",
+  "persona_id": "{{personaId}}",
+  "user_message": "What's the best investment strategy for someone my age with my risk tolerance?",
+  "agent_response": "Based on your conservative preference and 30-year investment timeline, I recommend a balanced portfolio with 60% bonds, 30% domestic stocks, and 10% international stocks. This allocation provides steady growth while minimizing risk.",
+  "context": {
+    "session_id": "{{sessionId}}",
+    "conversation_turn": 1,
+    "domain": "finance",
+    "intent": "investment_advice",
+    "previous_context": "User completed risk assessment questionnaire"
+  },
+  "metadata": {
+    "response_time": 1.5,
+    "confidence": 0.92,
+    "model_used": "financial_advisor_v1",
+    "tags": ["investment", "advice", "portfolio"]
+  }
+}
+
+### Store Follow-up Interaction
+POST {{baseUrl}}/memory/interaction
+Authorization: Bearer {{apiKey}}
+Content-Type: application/json
+
+{
+  "user_id": "{{userId}}",
+  "persona_id": "{{personaId}}",
+  "user_message": "How much should I allocate to emergency funds?",
+  "agent_response": "I recommend maintaining 3-6 months of expenses in an emergency fund. Based on your $3500 monthly expenses, aim for $10,500 to $21,000 in a high-yield savings account.",
+  "context": {
+    "session_id": "{{sessionId}}",
+    "conversation_turn": 2,
+    "domain": "finance",
+    "intent": "emergency_planning",
+    "previous_context": "Previous discussion about investment portfolio allocation"
+  },
+  "metadata": {
+    "response_time": 1.2,
+    "confidence": 0.95,
+    "model_used": "financial_advisor_v1",
+    "tags": ["emergency_fund", "savings", "planning"]
+  }
+}
+
+###
+# 3. MEMORY RETRIEVAL
+###
+
+### Get All Memories for Persona
+GET {{baseUrl}}/memory?persona={{personaId}}&limit=10
+Authorization: Bearer {{apiKey}}
+
+### Get Memories for Specific User and Persona
+GET {{baseUrl}}/memory?persona={{personaId}}&user_id={{userId}}&limit=5
+Authorization: Bearer {{apiKey}}
+
+### Get Memories Filtered by Content Type
+GET {{baseUrl}}/memory?persona={{personaId}}&content_type=preference&content_type=fact&limit=10
+Authorization: Bearer {{apiKey}}
+
+### Get High-Importance Memories
+GET {{baseUrl}}/memory?persona={{personaId}}&min_importance=7&limit=10
+Authorization: Bearer {{apiKey}}
+
+### Get Recent Interactions (Chain-of-Thought)
+GET {{baseUrl}}/memory?limit=5&recent_interactions=true&user_id={{userId}}
+Authorization: Bearer {{apiKey}}
+
+### Get Recent Interactions for Specific Persona
+GET {{baseUrl}}/memory?limit=3&recent_interactions=true&user_id={{userId}}&persona={{personaId}}
+Authorization: Bearer {{apiKey}}
+
+### Get Specific Memory by ID
+GET {{baseUrl}}/memory/{{testMemoryId}}
+Authorization: Bearer {{apiKey}}
+
+###
+# 4. PERSONA MEMORY SUMMARY
+###
+
+### Get Persona Memory Summary
+GET {{baseUrl}}/memory/persona/{{personaId}}/summary
+Authorization: Bearer {{apiKey}}
+
+### Get Persona Summary for Specific User
+GET {{baseUrl}}/memory/persona/{{personaId}}/summary?user_id={{userId}}
+Authorization: Bearer {{apiKey}}
+
+###
+# 5. MEMORY SEARCH
+###
+
+### Search Memories by Text Query
+GET {{baseUrl}}/memory/search?query=investment%20strategy&limit=5
+Authorization: Bearer {{apiKey}}
+
+### Search Memories for Specific Persona
+GET {{baseUrl}}/memory/search?query=conservative&persona_id={{personaId}}&limit=10
+Authorization: Bearer {{apiKey}}
+
+### Search with Content Type Filter
+GET {{baseUrl}}/memory/search?query=savings&content_type=preference&content_type=fact&limit=5
+Authorization: Bearer {{apiKey}}
+
+### Search for User-Specific Memories
+GET {{baseUrl}}/memory/search?query=income&user_id={{userId}}&persona_id={{personaId}}
+Authorization: Bearer {{apiKey}}
+
+###
+# 6. MEMORY MANAGEMENT
+###
+
+### Update Memory Content
+PUT {{baseUrl}}/memory/{{testMemoryId}}
+Authorization: Bearer {{apiKey}}
+Content-Type: application/json
+
+{
+  "content": "Updated: User strongly prefers conservative investment strategies with emphasis on capital preservation",
+  "metadata": {
+    "tags": ["investment", "conservative", "capital-preservation", "updated"],
+    "importance": 9,
+    "topic": "investment_strategy",
+    "context_type": "user_preference"
+  }
+}
+
+### Soft Delete Memory (Deactivate)
+DELETE {{baseUrl}}/memory/{{testMemoryId}}
+Authorization: Bearer {{apiKey}}
+
+### Hard Delete Memory (Permanent)
+DELETE {{baseUrl}}/memory/{{testMemoryId}}?hard_delete=true
+Authorization: Bearer {{apiKey}}
+
+###
+# 7. ERROR TESTING
+###
+
+### Test Missing Authentication (Should return 401)
+GET {{baseUrl}}/memory?persona={{personaId}}
+
+### Test Invalid API Key (Should return 401)
+GET {{baseUrl}}/memory?persona={{personaId}}
+Authorization: Bearer invalid_api_key
+
+### Test Invalid Request - Missing Required Fields (Should return 422)
+POST {{baseUrl}}/memory
+Authorization: Bearer {{apiKey}}
+Content-Type: application/json
+
+{
+  "user_id": "{{userId}}"
+}
+
+### Test Non-existent Memory (Should return 404)
+GET {{baseUrl}}/memory/non-existent-memory-id
+Authorization: Bearer {{apiKey}}
+
+### Test Invalid Persona Summary (Should return 404)
+GET {{baseUrl}}/memory/persona/non-existent-persona/summary
+Authorization: Bearer {{apiKey}}
+
+### Test Invalid Search Query (Should return 422)
+GET {{baseUrl}}/memory/search
+Authorization: Bearer {{apiKey}}
+
+###
+# 8. BULK TESTING SCENARIO
+###
+
+### Create Multiple Test Memories
+POST {{baseUrl}}/memory
+Authorization: Bearer {{apiKey}}
+Content-Type: application/json
+
+{
+  "user_id": "{{userId}}",
+  "persona_id": "{{personaId}}",
+  "content": "User is 35 years old and planning for retirement in 30 years",
+  "content_type": "fact",
+  "metadata": {
+    "tags": ["age", "retirement", "planning", "timeline"],
+    "importance": 7,
+    "topic": "retirement_planning",
+    "source": "user_profile"
+  }
+}
+
+### Create Another Test Memory
+POST {{baseUrl}}/memory
+Authorization: Bearer {{apiKey}}
+Content-Type: application/json
+
+{
+  "user_id": "{{userId}}",
+  "persona_id": "{{personaId}}",
+  "content": "User prefers ESG (Environmental, Social, Governance) investing options",
+  "content_type": "preference",
+  "metadata": {
+    "tags": ["ESG", "sustainable", "ethical", "investing"],
+    "importance": 6,
+    "topic": "investment_preferences",
+    "source": "user_input"
+  }
+}
+
+### Create Context Memory
+POST {{baseUrl}}/memory
+Authorization: Bearer {{apiKey}}
+Content-Type: application/json
+
+{
+  "user_id": "{{userId}}",
+  "persona_id": "{{personaId}}",
+  "content": "User completed comprehensive financial risk assessment with moderate-conservative results",
+  "content_type": "context",
+  "metadata": {
+    "tags": ["risk_assessment", "moderate", "conservative", "completed"],
+    "importance": 8,
+    "topic": "risk_profile",
+    "source": "assessment_tool"
+  }
+}
+
+### Verify All Memories Created
+GET {{baseUrl}}/memory?persona={{personaId}}&user_id={{userId}}&limit=20
+Authorization: Bearer {{apiKey}}
+
+###
+# 9. PERFORMANCE TESTING
+###
+
+### Test Pagination - Page 1
+GET {{baseUrl}}/memory?persona={{personaId}}&limit=5&offset=0
+Authorization: Bearer {{apiKey}}
+
+### Test Pagination - Page 2
+GET {{baseUrl}}/memory?persona={{personaId}}&limit=5&offset=5
+Authorization: Bearer {{apiKey}}
+
+### Test Large Limit
+GET {{baseUrl}}/memory?persona={{personaId}}&limit=100
+Authorization: Bearer {{apiKey}}
+
+### Test Complex Search
+GET {{baseUrl}}/memory/search?query=investment%20retirement%20conservative&persona_id={{personaId}}&limit=20
+Authorization: Bearer {{apiKey}}
+
+###
+# 10. INTEGRATION WORKFLOW TEST
+###
+
+### Step 1: Store User Onboarding Data
+POST {{baseUrl}}/memory
+Authorization: Bearer {{apiKey}}
+Content-Type: application/json
+
+{
+  "user_id": "integration_test_user",
+  "persona_id": "{{personaId}}",
+  "content": "New user completed onboarding: Age 28, Income $75000, Goals: House down payment in 5 years, Retirement planning",
+  "content_type": "fact",
+  "metadata": {
+    "tags": ["onboarding", "age_28", "income_75k", "house", "retirement"],
+    "importance": 9,
+    "topic": "user_profile",
+    "source": "onboarding_form"
+  }
+}
+
+### Step 2: Store Initial Consultation
+POST {{baseUrl}}/memory/interaction
+Authorization: Bearer {{apiKey}}
+Content-Type: application/json
+
+{
+  "user_id": "integration_test_user",
+  "persona_id": "{{personaId}}",
+  "user_message": "I want to save for a house down payment while also planning for retirement. What should I prioritize?",
+  "agent_response": "Given your 5-year timeline for the house and long-term retirement goals, I recommend a dual approach: 70% of savings toward a conservative house fund (high-yield savings, CDs) and 30% toward retirement (401k, Roth IRA with moderate growth investments).",
+  "context": {
+    "session_id": "integration_session_001",
+    "conversation_turn": 1,
+    "domain": "finance",
+    "intent": "goal_prioritization"
+  },
+  "metadata": {
+    "response_time": 2.1,
+    "confidence": 0.88,
+    "model_used": "financial_advisor_v1"
+  }
+}
+
+### Step 3: Retrieve Context for Follow-up
+GET {{baseUrl}}/memory?limit=3&recent_interactions=true&user_id=integration_test_user
+Authorization: Bearer {{apiKey}}
+
+### Step 4: Get User Profile Summary
+GET {{baseUrl}}/memory/persona/{{personaId}}/summary?user_id=integration_test_user
+Authorization: Bearer {{apiKey}}

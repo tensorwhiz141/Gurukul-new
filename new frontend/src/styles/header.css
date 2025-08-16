@@ -1,0 +1,159 @@
+/* Header component styles */
+
+/* Logo hover effect */
+.logo.hover-effect {
+  transition: all 0.15s ease;
+  position: relative;
+  color: #ffffff;
+}
+
+.logo.hover-effect:hover {
+  transform: scale(1.05);
+  color: #ffffff;
+  background: rgba(255, 153, 51, 0.15);
+}
+
+/* About link hover effect */
+.about-link.hover-effect {
+  transition: all 0.15s ease;
+  position: relative;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.about-link.hover-effect:hover {
+  transform: scale(1.02);
+  background: rgba(255, 153, 51, 0.15);
+  color: #ffffff;
+}
+
+/* Logout button hover effect */
+.logout-btn.hover-effect {
+  transition: all 0.15s ease;
+  position: relative;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  color: #ffffff;
+  border-radius: 24px; /* Pill shape */
+  overflow: visible;
+}
+
+.logout-btn.hover-effect:hover {
+  transform: scale(1.02);
+  background: rgba(255, 153, 51, 0.3); /* More vibrant orange background */
+  color: #ffffff;
+  box-shadow: 0 4px 16px 0 rgba(255, 153, 51, 0.2);
+  border-color: #ff9933; /* Simple orange border on hover */
+}
+
+/* Active state for NavLink */
+.about-link.active {
+  background: rgba(255, 153, 51, 0.2);
+  color: #ffffff;
+}
+
+/* Shared styles for header elements */
+.about-link {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.logout-btn {
+  border-radius: 24px; /* Pill shape */
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Custom audio player styles */
+/* Styling for the range input (volume slider and progress bar) */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  outline: none;
+}
+
+/* Thumb styles */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #ff9933;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #ff9933;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+/* Hover effects */
+input[type="range"]:hover::-webkit-slider-thumb {
+  background: #ffd700;
+  transform: scale(1.2);
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  background: #ffd700;
+  transform: scale(1.2);
+}
+
+/* Avatar styling */
+.logout-btn {
+  position: relative; /* Ensure proper positioning for absolute elements */
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 2; /* Ensure avatar is above placeholder */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 153, 51, 0.7),
+    rgba(255, 215, 0, 0.7)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Below the avatar image */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.avatar-placeholder:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

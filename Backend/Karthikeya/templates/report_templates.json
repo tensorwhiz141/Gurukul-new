@@ -1,0 +1,363 @@
+{
+  "edumentor": {
+    "progress_report": {
+      "en": {
+        "title": "Learning Progress Report",
+        "summary": "Your learning journey shows {sentiment_description}. You have completed {completed_modules} out of {total_modules} modules with an average score of {average_score}%.",
+        "risk_assessment": {
+          "low": "You're doing great! Keep up the excellent work.",
+          "medium": "Your progress is steady, but there's room for improvement. Consider dedicating more time to challenging topics.",
+          "high": "We notice you might be struggling. Don't worry - our support team is here to help you get back on track."
+        },
+        "recommendations": {
+          "low": "Continue your current study pattern and explore advanced topics in {subject_area}.",
+          "medium": "Focus on {weak_areas} and try the practice exercises. Consider joining study groups.",
+          "high": "We recommend scheduling a one-on-one session with a mentor. Review the basics in {weak_areas}."
+        },
+        "nudge_triggers": {
+          "missed_quizzes": "You've missed {missed_count} quizzes this week. Taking regular assessments helps track your progress.",
+          "low_engagement": "Your engagement has decreased by {percentage}% this week. Let's get you back on track!",
+          "streak_break": "Your {streak_days}-day learning streak is at risk. Complete today's lesson to maintain momentum."
+        }
+      },
+      "hi": {
+        "title": "शिक्षा प्रगति रिपोर्ट",
+        "summary": "आपकी शिक्षा यात्रा {sentiment_description} दिखाती है। आपने {total_modules} में से {completed_modules} मॉड्यूल पूरे किए हैं और औसत स्कोर {average_score}% है।",
+        "risk_assessment": {
+          "low": "आप बहुत अच्छा कर रहे हैं! इसी तरह उत्कृष्ट काम जारी रखें।",
+          "medium": "आपकी प्रगति स्थिर है, लेकिन सुधार की गुंजाइश है। चुनौतीपूर्ण विषयों पर अधिक समय देने पर विचार करें।",
+          "high": "हमें लगता है कि आप संघर्ष कर रहे हैं। चिंता न करें - हमारी सहायता टीम आपको वापस पटरी पर लाने के लिए यहाँ है।"
+        },
+        "recommendations": {
+          "low": "अपना वर्तमान अध्ययन पैटर्न जारी रखें और {subject_area} में उन्नत विषयों का अन्वेषण करें।",
+          "medium": "{weak_areas} पर ध्यान दें और अभ्यास अभ्यास करने का प्रयास करें। अध्ययन समूहों में शामिल होने पर विचार करें।",
+          "high": "हम एक गुरु के साथ एक-पर-एक सत्र निर्धारित करने की सलाह देते हैं। {weak_areas} में मूल बातों की समीक्षा करें।"
+        },
+        "nudge_triggers": {
+          "missed_quizzes": "आपने इस सप्ताह {missed_count} प्रश्नोत्तरी छोड़ी हैं। नियमित मूल्यांकन आपकी प्रगति को ट्रैक करने में मदद करता है।",
+          "low_engagement": "इस सप्ताह आपकी सहभागिता {percentage}% कम हो गई है। आइए आपको वापस पटरी पर लाते हैं!",
+          "streak_break": "आपकी {streak_days}-दिन की शिक्षा श्रृंखला खतरे में है। गति बनाए रखने के लिए आज का पाठ पूरा करें।"
+        }
+      },
+      "bn": {
+        "title": "শিক্ষার অগ্রগতি রিপোর্ট",
+        "summary": "আপনার শেখার যাত্রা {sentiment_description} দেখাচ্ছে। আপনি {total_modules} টির মধ্যে {completed_modules} টি মডিউল সম্পন্ন করেছেন এবং গড় স্কোর {average_score}%।",
+        "risk_assessment": {
+          "low": "আপনি দুর্দান্ত করছেন! এই চমৎকার কাজ চালিয়ে যান।",
+          "medium": "আপনার অগ্রগতি স্থিতিশীল, তবে উন্নতির সুযোগ রয়েছে। চ্যালেঞ্জিং বিষয়গুলিতে আরও সময় দেওয়ার কথা বিবেচনা করুন।",
+          "high": "আমরা লক্ষ্য করেছি যে আপনি হয়তো সংগ্রাম করছেন। চিন্তা করবেন না - আমাদের সহায়তা দল আপনাকে পুনরায় ট্র্যাকে ফিরিয়ে আনতে এখানে আছে।"
+        },
+        "recommendations": {
+          "low": "আপনার বর্তমান অধ্যয়নের ধরন চালিয়ে যান এবং {subject_area} এ উন্নত বিষয়গুলি অন্বেষণ করুন।",
+          "medium": "{weak_areas} এ ফোকাস করুন এবং অনুশীলনের ব্যায়াম চেষ্টা করুন। অধ্যয়ন গ্রুপে যোগদানের কথা বিবেচনা করুন।",
+          "high": "আমরা একজন পরামর্শদাতার সাথে এক-এক-এক সেশন নির্ধারণের সুপারিশ করি। {weak_areas} এ মূল বিষয়গুলি পর্যালোচনা করুন।"
+        },
+        "nudge_triggers": {
+          "missed_quizzes": "আপনি এই সপ্তাহে {missed_count} টি কুইজ মিস করেছেন। নিয়মিত মূল্যায়ন আপনার অগ্রগতি ট্র্যাক করতে সাহায্য করে।",
+          "low_engagement": "এই সপ্তাহে আপনার সম্পৃক্ততা {percentage}% কমেছে। আসুন আপনাকে আবার ট্র্যাকে ফিরিয়ে আনি!",
+          "streak_break": "আপনার {streak_days}-দিনের শেখার ধারা ঝুঁকিতে রয়েছে। গতি বজায় রাখতে আজকের পাঠ সম্পন্ন করুন।"
+        }
+      },
+      "gu": {
+        "title": "શિક્ષણ પ્રગતિ રિપોર્ટ",
+        "summary": "તમારી શિક્ષણ યાત્રા {sentiment_description} દર્શાવે છે। તમે {total_modules} માંથી {completed_modules} મોડ્યુલ પૂર્ણ કર્યા છે અને સરેરાશ સ્કોર {average_score}% છે।",
+        "risk_assessment": {
+          "low": "તમે ખૂબ સારું કરી રહ્યા છો! આ ઉત્કૃષ્ટ કાર્ય ચાલુ રાખો।",
+          "medium": "તમારી પ્રગતિ સ્થિર છે, પરંતુ સુધારાની ગુંજાઇશ છે। પડકારજનક વિષયો પર વધુ સમય આપવાનું વિચારો।",
+          "high": "અમે નોંધ્યું છે કે તમે કદાચ સંઘર્ષ કરી રહ્યા છો. ચિંતા કરશો નહીં - અમારી સહાયતા ટીમ તમને પાછા ટ્રેક પર લાવવા માટે અહીં છે।"
+        },
+        "recommendations": {
+          "low": "તમારી વર્તમાન અભ્યાસ પદ્ધતિ ચાલુ રાખો અને {subject_area} માં અદ્યતન વિષયોનું અન્વેષણ કરો।",
+          "medium": "{weak_areas} પર ધ્યાન આપો અને પ્રેક્ટિસ એક્સરસાઇઝ કરવાનો પ્રયાસ કરો। અભ્યાસ જૂથોમાં જોડાવાનું વિચારો।",
+          "high": "અમે એક માર્ગદર્શક સાથે એક-પર-એક સત્રનું આયોજન કરવાની ભલામણ કરીએ છીએ। {weak_areas} માં મૂળભૂત બાબતોની સમીક્ષા કરો।"
+        },
+        "nudge_triggers": {
+          "missed_quizzes": "તમે આ અઠવાડિયે {missed_count} ક્વિઝ ચૂકી ગયા છો। નિયમિત મૂલ્યાંકન તમારી પ્રગતિને ટ્રેક કરવામાં મદદ કરે છે।",
+          "low_engagement": "આ અઠવાડિયે તમારી સંલગ્નતા {percentage}% ઘટી છે. ચાલો તમને પાછા ટ્રેક પર લાવીએ!",
+          "streak_break": "તમારી {streak_days}-દિવસની શિક્ષણ શ્રેણી જોખમમાં છે. ગતિ જાળવવા માટે આજનો પાઠ પૂર્ણ કરો।"
+        }
+      },
+      "mr": {
+        "title": "शिक्षण प्रगती अहवाल",
+        "summary": "तुमचा शिक्षणाचा प्रवास {sentiment_description} दर्शवितो। तुम्ही {total_modules} पैकी {completed_modules} मॉड्यूल पूर्ण केले आहेत आणि सरासरी स्कोअर {average_score}% आहे।",
+        "risk_assessment": {
+          "low": "तुम्ही खूप चांगले करत आहात! हे उत्कृष्ट काम चालू ठेवा।",
+          "medium": "तुमची प्रगती स्थिर आहे, परंतु सुधारणेची गुंजाइश आहे। आव्हानात्मक विषयांवर अधिक वेळ देण्याचा विचार करा।",
+          "high": "आम्ही लक्षात घेतले आहे की तुम्ही कदाचित संघर्ष करत आहात। काळजी करू नका - आमची सहाय्य टीम तुम्हाला परत ट्रॅकवर आणण्यासाठी येथे आहे।"
+        },
+        "recommendations": {
+          "low": "तुमची सध्याची अभ्यास पद्धती चालू ठेवा आणि {subject_area} मध्ये प्रगत विषयांचे अन्वेषण करा।",
+          "medium": "{weak_areas} वर लक्ष केंद्रित करा आणि सराव व्यायाम करण्याचा प्रयत्न करा। अभ्यास गटांमध्ये सामील होण्याचा विचार करा।",
+          "high": "आम्ही एका मार्गदर्शकासोबत एक-एक सत्राचे आयोजन करण्याची शिफारस करतो। {weak_areas} मध्ये मूलभूत गोष्टींचे पुनरावलोकन करा।"
+        },
+        "nudge_triggers": {
+          "missed_quizzes": "तुम्ही या आठवड्यात {missed_count} क्विझ चुकवल्या आहेत। नियमित मूल्यमापन तुमची प्रगती ट्रॅक करण्यास मदत करते।",
+          "low_engagement": "या आठवड्यात तुमची सहभाग {percentage}% कमी झाली आहे। चला तुम्हाला परत ट्रॅकवर आणूया!",
+          "streak_break": "तुमची {streak_days}-दिवसांची शिक्षण मालिका धोक्यात आहे। गती राखण्यासाठी आजचा धडा पूर्ण करा।"
+        }
+      },
+      "ta": {
+        "title": "கல்வி முன்னேற்ற அறிக்கை",
+        "summary": "உங்கள் கற்றல் பயணம் {sentiment_description} காட்டுகிறது। நீங்கள் {total_modules} இல் {completed_modules} தொகுதிகளை முடித்துள்ளீர்கள் மற்றும் சராசரி மதிப்பெண் {average_score}%.",
+        "risk_assessment": {
+          "low": "நீங்கள் மிகச் சிறப்பாக செய்கிறீர்கள்! இந்த சிறந்த வேலையைத் தொடருங்கள்।",
+          "medium": "உங்கள் முன்னேற்றம் நிலையானது, ஆனால் மேம்பாட்டிற்கான வாய்ப்பு உள்ளது। சவாலான தலைப்புகளில் அதிக நேரம் செலவிடுவதைக் கருத்தில் கொள்ளுங்கள்।",
+          "high": "நீங்கள் போராடுகிறீர்கள் என்பதை நாங்கள் கவனித்தோம். கவலைப்பட வேண்டாம் - எங்கள் ஆதரவு குழு உங்களை மீண்டும் பாதையில் கொண்டு வர இங்கே உள்ளது।"
+        },
+        "recommendations": {
+          "low": "உங்கள் தற்போதைய படிப்பு முறையைத் தொடருங்கள் மற்றும் {subject_area} இல் மேம்பட்ட தலைப்புகளை ஆராயுங்கள்।",
+          "medium": "{weak_areas} இல் கவனம் செலுத்துங்கள் மற்றும் பயிற்சி பயிற்சிகளை முயற்சிக்கவும். படிப்பு குழுக்களில் சேருவதைக் கருத்தில் கொள்ளுங்கள்।",
+          "high": "ஒரு வழிகாட்டியுடன் ஒருவருக்கு ஒருவர் அமர்வை திட்டமிட பரிந்துரைக்கிறோம். {weak_areas} இல் அடிப்படைகளை மதிப்பாய்வு செய்யுங்கள்।"
+        },
+        "nudge_triggers": {
+          "missed_quizzes": "இந்த வாரம் நீங்கள் {missed_count} வினாடி வினாக்களை தவறவிட்டீர்கள். வழக்கமான மதிப்பீடு உங்கள் முன்னேற்றத்தைக் கண்காணிக்க உதவுகிறது।",
+          "low_engagement": "இந்த வாரம் உங்கள் ஈடுபாடு {percentage}% குறைந்துள்ளது. உங்களை மீண்டும் பாதையில் கொண்டு வருவோம்!",
+          "streak_break": "உங்கள் {streak_days}-நாள் கற்றல் தொடர் ஆபத்தில் உள்ளது. வேகத்தை பராமரிக்க இன்றைய பாடத்தை முடிக்கவும்।"
+        }
+      },
+      "te": {
+        "title": "విద్యా పురోగతి నివేదిక",
+        "summary": "మీ అభ్యాస ప్రయాణం {sentiment_description} చూపిస్తుంది. మీరు {total_modules} లో {completed_modules} మాడ్యూల్స్ పూర్తి చేశారు మరియు సగటు స్కోర్ {average_score}%.",
+        "risk_assessment": {
+          "low": "మీరు చాలా బాగా చేస్తున్నారు! ఈ అద్భుతమైన పనిని కొనసాగించండి।",
+          "medium": "మీ పురోగతి స్థిరంగా ఉంది, కానీ మెరుగుదలకు అవకాశం ఉంది. సవాలుగా ఉన్న అంశాలపై ఎక్కువ సమయం గడపాలని భావించండి।",
+          "high": "మీరు కష్టపడుతున్నారని మేము గమనించాము. చింతించకండి - మా సహాయ బృందం మిమ్మల్ని తిరిగి ట్రాక్‌లో ఉంచడానికి ఇక్కడ ఉంది।"
+        },
+        "recommendations": {
+          "low": "మీ ప్రస్తుత అధ్యయన విధానాన్ని కొనసాగించండి మరియు {subject_area} లో అధునాతన అంశాలను అన్వేషించండి।",
+          "medium": "{weak_areas} పై దృష్టి పెట్టండి మరియు అభ్యాస వ్యాయామాలను ప్రయత్నించండి. అధ్యయన సమూహాలలో చేరడాన్ని పరిగణించండి।",
+          "high": "మేము మార్గదర్శకుడితో ఒకరికొకరు సెషన్ షెడ్యూల్ చేయాలని సిఫార్సు చేస్తున్నాము. {weak_areas} లో ప్రాథమిక అంశాలను సమీక్షించండి।"
+        },
+        "nudge_triggers": {
+          "missed_quizzes": "మీరు ఈ వారం {missed_count} క్విజ్‌లను మిస్ చేశారు. క్రమం తప్పకుండా అంచనా వేయడం మీ పురోగతిని ట్రాక్ చేయడంలో సహాయపడుతుంది।",
+          "low_engagement": "ఈ వారం మీ నిమగ్నత {percentage}% తగ్గింది. మిమ్మల్ని తిరిగి ట్రాక్‌లో ఉంచుదాం!",
+          "streak_break": "మీ {streak_days}-రోజుల అభ్యాస శ్రేణి ప్రమాదంలో ఉంది. వేగాన్ని కొనసాగించడానికి నేటి పాఠాన్ని పూర్తి చేయండి।"
+        }
+      },
+      "kn": {
+        "title": "ಶಿಕ್ಷಣ ಪ್ರಗತಿ ವರದಿ",
+        "summary": "ನಿಮ್ಮ ಕಲಿಕೆಯ ಪ್ರಯಾಣವು {sentiment_description} ತೋರಿಸುತ್ತದೆ. ನೀವು {total_modules} ರಲ್ಲಿ {completed_modules} ಮಾಡ್ಯೂಲ್‌ಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿದ್ದೀರಿ ಮತ್ತು ಸರಾಸರಿ ಸ್ಕೋರ್ {average_score}%.",
+        "risk_assessment": {
+          "low": "ನೀವು ತುಂಬಾ ಚೆನ್ನಾಗಿ ಮಾಡುತ್ತಿದ್ದೀರಿ! ಈ ಅತ್ಯುತ್ತಮ ಕೆಲಸವನ್ನು ಮುಂದುವರಿಸಿ।",
+          "medium": "ನಿಮ್ಮ ಪ್ರಗತಿಯು ಸ್ಥಿರವಾಗಿದೆ, ಆದರೆ ಸುಧಾರಣೆಗೆ ಅವಕಾಶವಿದೆ. ಸವಾಲಿನ ವಿಷಯಗಳಿಗೆ ಹೆಚ್ಚು ಸಮಯ ನೀಡುವುದನ್ನು ಪರಿಗಣಿಸಿ।",
+          "high": "ನೀವು ಹೋರಾಡುತ್ತಿದ್ದೀರಿ ಎಂದು ನಾವು ಗಮನಿಸಿದ್ದೇವೆ. ಚಿಂತಿಸಬೇಡಿ - ನಮ್ಮ ಬೆಂಬಲ ತಂಡವು ನಿಮ್ಮನ್ನು ಮತ್ತೆ ಟ್ರ್ಯಾಕ್‌ಗೆ ತರಲು ಇಲ್ಲಿದೆ।"
+        },
+        "recommendations": {
+          "low": "ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಅಧ್ಯಯನ ಮಾದರಿಯನ್ನು ಮುಂದುವರಿಸಿ ಮತ್ತು {subject_area} ನಲ್ಲಿ ಮುಂದುವರಿದ ವಿಷಯಗಳನ್ನು ಅನ್ವೇಷಿಸಿ।",
+          "medium": "{weak_areas} ಮೇಲೆ ಗಮನಹರಿಸಿ ಮತ್ತು ಅಭ್ಯಾಸ ವ್ಯಾಯಾಮಗಳನ್ನು ಪ್ರಯತ್ನಿಸಿ। ಅಧ್ಯಯನ ಗುಂಪುಗಳಿಗೆ ಸೇರುವುದನ್ನು ಪರಿಗಣಿಸಿ।",
+          "high": "ನಾವು ಮಾರ್ಗದರ್ಶಕರೊಂದಿಗೆ ಒಬ್ಬರಿಗೊಬ್ಬರು ಸೆಷನ್ ಅನ್ನು ನಿಗದಿಪಡಿಸಲು ಶಿಫಾರಸು ಮಾಡುತ್ತೇವೆ. {weak_areas} ನಲ್ಲಿ ಮೂಲಭೂತ ವಿಷಯಗಳನ್ನು ಪರಿಶೀಲಿಸಿ।"
+        },
+        "nudge_triggers": {
+          "missed_quizzes": "ನೀವು ಈ ವಾರ {missed_count} ಕ್ವಿಜ್‌ಗಳನ್ನು ತಪ್ಪಿಸಿದ್ದೀರಿ. ನಿಯಮಿತ ಮೌಲ್ಯಮಾಪನವು ನಿಮ್ಮ ಪ್ರಗತಿಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ।",
+          "low_engagement": "ಈ ವಾರ ನಿಮ್ಮ ನಿರತತೆ {percentage}% ಕಡಿಮೆಯಾಗಿದೆ. ನಿಮ್ಮನ್ನು ಮತ್ತೆ ಟ್ರ್ಯಾಕ್‌ಗೆ ತರೋಣ!",
+          "streak_break": "ನಿಮ್ಮ {streak_days}-ದಿನಗಳ ಕಲಿಕೆಯ ಸರಣಿಯು ಅಪಾಯದಲ್ಲಿದೆ. ವೇಗವನ್ನು ಕಾಪಾಡಿಕೊಳ್ಳಲು ಇಂದಿನ ಪಾಠವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ।"
+        }
+      }
+    },
+    "quiz_performance": {
+      "en": {
+        "title": "Quiz Performance Analysis",
+        "summary": "Your recent quiz performance shows {sentiment_description} trends. You scored {current_score}% in your latest quiz, which is {comparison} your average of {average_score}%.",
+        "strengths": "You excel in {strong_subjects}. Your accuracy in these areas is consistently above {accuracy_threshold}%.",
+        "improvement_areas": "Focus on improving {weak_subjects}. These areas need attention to boost your overall performance.",
+        "recommendations": {
+          "excellent": "Outstanding performance! Consider taking advanced quizzes in {strong_subjects}.",
+          "good": "Good work! Review {weak_subjects} and take practice quizzes to improve further.",
+          "needs_improvement": "Don't be discouraged. Focus on fundamentals in {weak_subjects} and seek help when needed."
+        }
+      },
+      "hi": {
+        "title": "प्रश्नोत्तरी प्रदर्शन विश्लेषण",
+        "summary": "आपके हाल के प्रश्नोत्तरी प्रदर्शन में {sentiment_description} रुझान दिखाई दे रहे हैं। आपने अपनी नवीनतम प्रश्नोत्तरी में {current_score}% स्कोर किया है, जो आपके {average_score}% के औसत से {comparison} है।",
+        "strengths": "आप {strong_subjects} में उत्कृष्ट हैं। इन क्षेत्रों में आपकी सटीकता लगातार {accuracy_threshold}% से ऊपर है।",
+        "improvement_areas": "{weak_subjects} में सुधार पर ध्यान दें। आपके समग्र प्रदर्शन को बढ़ाने के लिए इन क्षेत्रों पर ध्यान देने की आवश्यकता है।",
+        "recommendations": {
+          "excellent": "उत्कृष्ट प्रदर्शन! {strong_subjects} में उन्नत प्रश्नोत्तरी लेने पर विचार करें।",
+          "good": "अच्छा काम! {weak_subjects} की समीक्षा करें और आगे सुधार के लिए अभ्यास प्रश्नोत्तरी लें।",
+          "needs_improvement": "हतोत्साहित न हों। {weak_subjects} में मूल बातों पर ध्यान दें और जरूरत पड़ने पर मदद लें।"
+        }
+      },
+      "bn": {
+        "title": "কুইজ পারফরম্যান্স বিশ্লেষণ",
+        "summary": "আপনার সাম্প্রতিক কুইজ পারফরম্যান্স {sentiment_description} প্রবণতা দেখাচ্ছে। আপনি আপনার সর্বশেষ কুইজে {current_score}% স্কোর করেছেন, যা আপনার {average_score}% গড়ের {comparison}।",
+        "strengths": "আপনি {strong_subjects} এ দক্ষ। এই ক্ষেত্রগুলিতে আপনার নির্ভুলতা ধারাবাহিকভাবে {accuracy_threshold}% এর উপরে।",
+        "improvement_areas": "{weak_subjects} উন্নত করার দিকে মনোনিবেশ করুন। আপনার সামগ্রিক পারফরম্যান্স বাড়াতে এই ক্ষেত্রগুলিতে মনোযোগ প্রয়োজন।",
+        "recommendations": {
+          "excellent": "অসাধারণ পারফরম্যান্স! {strong_subjects} এ উন্নত কুইজ নেওয়ার কথা বিবেচনা করুন।",
+          "good": "ভাল কাজ! {weak_subjects} পর্যালোচনা করুন এবং আরও উন্নতির জন্য অনুশীলন কুইজ নিন।",
+          "needs_improvement": "নিরুৎসাহিত হবেন না। {weak_subjects} এ মৌলিক বিষয়গুলিতে ফোকাস করুন এবং প্রয়োজনে সাহায্য নিন।"
+        }
+      }
+    }
+  },
+  "wellness": {
+    "financial_health": {
+      "en": {
+        "title": "Financial Wellness Report",
+        "summary": "Your financial health shows {sentiment_description} patterns. Your spending this month is {spending_comparison} your budget, with a savings rate of {savings_rate}%.",
+        "risk_assessment": {
+          "low": "Excellent financial discipline! You're on track to meet your financial goals.",
+          "medium": "Your finances are stable, but watch out for overspending in {high_spending_categories}.",
+          "high": "We've detected concerning spending patterns. It's time to review your budget and consider financial counseling."
+        },
+        "recommendations": {
+          "low": "Consider increasing your emergency fund or exploring investment opportunities.",
+          "medium": "Set stricter limits on {high_spending_categories} and track daily expenses more closely.",
+          "high": "Create a strict budget plan and consider speaking with a financial advisor. Focus on essential expenses only."
+        },
+        "nudge_triggers": {
+          "overspending": "You've exceeded your {category} budget by {amount}. Consider postponing non-essential purchases.",
+          "low_savings": "Your savings rate has dropped to {rate}% this month. Small adjustments can make a big difference.",
+          "bill_reminder": "You have {count} bills due in the next 3 days totaling {amount}. Don't forget to pay them on time."
+        }
+      },
+      "hi": {
+        "title": "वित्तीय कल्याण रिपोर्ट",
+        "summary": "आपका वित्तीय स्वास्थ्य {sentiment_description} पैटर्न दिखाता है। इस महीने आपका खर्च आपके बजट से {spending_comparison} है, और बचत दर {savings_rate}% है।",
+        "risk_assessment": {
+          "low": "उत्कृष्ट वित्तीय अनुशासन! आप अपने वित्तीय लक्ष्यों को पूरा करने के रास्ते पर हैं।",
+          "medium": "आपकी वित्तीय स्थिति स्थिर है, लेकिन {high_spending_categories} में अधिक खर्च से बचें।",
+          "high": "हमने चिंताजनक खर्च पैटर्न का पता लगाया है। अपने बजट की समीक्षा करने और वित्तीय परामर्श लेने का समय है।"
+        },
+        "recommendations": {
+          "low": "अपने आपातकालीन फंड को बढ़ाने या निवेश के अवसरों का पता लगाने पर विचार करें।",
+          "medium": "{high_spending_categories} पर सख्त सीमा निर्धारित करें और दैनिक खर्चों को अधिक बारीकी से ट्रैक करें।",
+          "high": "एक सख्त बजट योजना बनाएं और वित्तीय सलाहकार से बात करने पर विचार करें। केवल आवश्यक खर्चों पर ध्यान दें।"
+        },
+        "nudge_triggers": {
+          "overspending": "आपने अपने {category} बजट को {amount} से पार कर लिया है। गैर-आवश्यक खरीदारी को स्थगित करने पर विचार करें।",
+          "low_savings": "इस महीने आपकी बचत दर {rate}% तक गिर गई है। छोटे समायोजन बड़ा अंतर ला सकते हैं।",
+          "bill_reminder": "अगले 3 दिनों में आपके {count} बिल देय हैं जिनकी कुल राशि {amount} है। उन्हें समय पर भुगतान करना न भूलें।"
+        }
+      },
+      "bn": {
+        "title": "আর্থিক সুস্থতা রিপোর্ট",
+        "summary": "আপনার আর্থিক স্বাস্থ্য {sentiment_description} প্যাটার্ন দেখাচ্ছে। এই মাসে আপনার খরচ আপনার বাজেটের {spending_comparison}, এবং সঞ্চয়ের হার {savings_rate}%।",
+        "risk_assessment": {
+          "low": "চমৎকার আর্থিক শৃঙ্খলা! আপনি আপনার আর্থিক লক্ষ্য পূরণের পথে আছেন।",
+          "medium": "আপনার আর্থিক অবস্থা স্থিতিশীল, তবে {high_spending_categories} এ অতিরিক্ত খরচ থেকে সাবধান থাকুন।",
+          "high": "আমরা উদ্বেগজনক খরচের ধরন সনাক্ত করেছি। আপনার বাজেট পর্যালোচনা করার এবং আর্থিক পরামর্শ নেওয়ার সময় এসেছে।"
+        },
+        "recommendations": {
+          "low": "আপনার জরুরি তহবিল বৃদ্ধি বা বিনিয়োগের সুযোগ অন্বেষণ করার কথা বিবেচনা করুন।",
+          "medium": "{high_spending_categories} এ কঠোর সীমা নির্ধারণ করুন এবং দৈনিক খরচ আরও নিবিড়ভাবে ট্র্যাক করুন।",
+          "high": "একটি কঠোর বাজেট পরিকল্পনা তৈরি করুন এবং একজন আর্থিক উপদেষ্টার সাথে কথা বলার কথা বিবেচনা করুন। শুধুমাত্র প্রয়োজনীয় খরচে ফোকাস করুন।"
+        },
+        "nudge_triggers": {
+          "overspending": "আপনি আপনার {category} বাজেট {amount} দ্বারা অতিক্রম করেছেন। অপ্রয়োজনীয় কেনাকাটা স্থগিত করার কথা বিবেচনা করুন।",
+          "low_savings": "এই মাসে আপনার সঞ্চয়ের হার {rate}% এ নেমেছে। ছোট সমন্বয় বড় পার্থক্য আনতে পারে।",
+          "bill_reminder": "আগামী ৩ দিনে আপনার {count} টি বিল মোট {amount} পরিশোধ করতে হবে। সময়মতো পরিশোধ করতে ভুলবেন না।"
+        }
+      }
+    },
+    "emotional_health": {
+      "en": {
+        "title": "Emotional Wellness Check",
+        "summary": "Your emotional wellness indicators show {sentiment_description} trends. Based on your recent activity and engagement patterns, we've identified areas for attention.",
+        "risk_assessment": {
+          "low": "You're maintaining good emotional balance. Keep up the healthy habits!",
+          "medium": "Some stress indicators detected. Consider taking breaks and practicing self-care.",
+          "high": "We're concerned about your emotional well-being. Please consider reaching out for support."
+        },
+        "recommendations": {
+          "low": "Continue your current wellness practices. Consider exploring new stress-relief activities.",
+          "medium": "Try meditation, regular exercise, or talking to friends. Maintain a healthy work-life balance.",
+          "high": "We strongly recommend speaking with a counselor or therapist. Take time off if needed."
+        },
+        "nudge_triggers": {
+          "stress_spike": "Your stress levels seem elevated today. Take a 10-minute break and try some deep breathing.",
+          "low_activity": "You've been less active lately. A short walk or light exercise might help boost your mood.",
+          "social_isolation": "You haven't connected with friends recently. Consider reaching out to someone you care about."
+        }
+      },
+      "hi": {
+        "title": "भावनात्मक कल्याण जांच",
+        "summary": "आपके भावनात्मक कल्याण संकेतक {sentiment_description} रुझान दिखाते हैं। आपकी हाल की गतिविधि और सहभागिता पैटर्न के आधार पर, हमने ध्यान देने योग्य क्षेत्रों की पहचान की है।",
+        "risk_assessment": {
+          "low": "आप अच्छा भावनात्मक संतुलन बनाए रख रहे हैं। स्वस्थ आदतों को जारी रखें!",
+          "medium": "कुछ तनाव संकेतक का पता चला है। ब्रेक लेने और स्व-देखभाल का अभ्यास करने पर विचार करें।",
+          "high": "हम आपकी भावनात्मक भलाई के बारे में चिंतित हैं। कृपया सहायता के लिए संपर्क करने पर विचार करें।"
+        },
+        "recommendations": {
+          "low": "अपनी वर्तमान कल्याण प्रथाओं को जारी रखें। नई तनाव-राहत गतिविधियों का पता लगाने पर विचार करें।",
+          "medium": "ध्यान, नियमित व्यायाम, या दोस्तों से बात करने की कोशिश करें। एक स्वस्थ कार्य-जीवन संतुलन बनाए रखें।",
+          "high": "हम दृढ़ता से एक परामर्शदाता या चिकित्सक से बात करने की सलाह देते हैं। यदि आवश्यक हो तो समय निकालें।"
+        },
+        "nudge_triggers": {
+          "stress_spike": "आज आपका तनाव स्तर बढ़ा हुआ लगता है। 10 मिनट का ब्रेक लें और गहरी सांस लेने की कोशिश करें।",
+          "low_activity": "आप हाल ही में कम सक्रिय रहे हैं। एक छोटी सैर या हल्का व्यायाम आपके मूड को बेहतर बनाने में मदद कर सकता है।",
+          "social_isolation": "आपने हाल ही में दोस्तों से संपर्क नहीं किया है। किसी ऐसे व्यक्ति से संपर्क करने पर विचार करें जिसकी आप परवाह करते हैं।"
+        }
+      },
+      "bn": {
+        "title": "আবেগিক সুস্থতা পরীক্ষা",
+        "summary": "আপনার আবেগিক সুস্থতার সূচকগুলি {sentiment_description} প্রবণতা দেখাচ্ছে। আপনার সাম্প্রতিক কার্যকলাপ এবং সম্পৃক্ততার ধরনের ভিত্তিতে, আমরা মনোযোগের ক্ষেত্রগুলি চিহ্নিত করেছি।",
+        "risk_assessment": {
+          "low": "আপনি ভাল আবেগিক ভারসাম্য বজায় রাখছেন। স্বাস্থ্যকর অভ্যাস চালিয়ে যান!",
+          "medium": "কিছু চাপের সূচক সনাক্ত করা হয়েছে। বিরতি নেওয়া এবং স্ব-যত্ন অনুশীলন করার কথা বিবেচনা করুন।",
+          "high": "আমরা আপনার আবেগিক সুস্থতা নিয়ে উদ্বিগ্ন। অনুগ্রহ করে সহায়তার জন্য যোগাযোগ করার কথা বিবেচনা করুন।"
+        },
+        "recommendations": {
+          "low": "আপনার বর্তমান সুস্থতার অনুশীলন চালিয়ে যান। নতুন চাপ-মুক্তির কার্যকলাপ অন্বেষণ করার কথা বিবেচনা করুন।",
+          "medium": "ধ্যান, নিয়মিত ব্যায়াম, বা বন্ধুদের সাথে কথা বলার চেষ্টা করুন। একটি স্বাস্থ্যকর কর্ম-জীবনের ভারসাম্য বজায় রাখুন।",
+          "high": "আমরা দৃঢ়ভাবে একজন পরামর্শদাতা বা থেরাপিস্টের সাথে কথা বলার পরামর্শ দিই। প্রয়োজনে সময় নিন।"
+        },
+        "nudge_triggers": {
+          "stress_spike": "আজ আপনার চাপের মাত্রা বেড়েছে বলে মনে হচ্ছে। ১০ মিনিটের বিরতি নিন এবং গভীর শ্বাস নেওয়ার চেষ্টা করুন।",
+          "low_activity": "আপনি সম্প্রতি কম সক্রিয় হয়েছেন। একটি ছোট হাঁটা বা হালকা ব্যায়াম আপনার মেজাজ উন্নত করতে সাহায্য করতে পারে।",
+          "social_isolation": "আপনি সম্প্রতি বন্ধুদের সাথে যোগাযোগ করেননি। আপনি যার যত্ন নেন এমন কারো সাথে যোগাযোগ করার কথা বিবেচনা করুন।"
+        }
+      }
+    },
+    "lesson_content": {
+      "en": {
+        "title": "Learning Content: {subject} - {topic}",
+        "summary": "This lesson covers the fundamental concepts of {topic} in {subject}. You will learn key principles, practical applications, and develop a comprehensive understanding of the subject matter.",
+        "content_sections": {
+          "introduction": "Welcome to this comprehensive lesson on {topic}. This subject is an important part of {subject} and will help you build a strong foundation for further learning.",
+          "key_concepts": "The main concepts you'll learn include the basic principles of {topic}, its applications, and how it relates to other areas in {subject}.",
+          "practical_application": "You'll engage with hands-on activities and real-world examples to reinforce your understanding of {topic}.",
+          "assessment": "Test your knowledge with interactive quizzes and reflection questions designed to deepen your comprehension."
+        },
+        "learning_objectives": {
+          "understand": "Understand the fundamental principles of {topic}",
+          "apply": "Apply {topic} concepts to practical situations",
+          "analyze": "Analyze the relationship between {topic} and {subject}",
+          "evaluate": "Evaluate your understanding through self-assessment"
+        }
+      },
+      "hi": {
+        "title": "शिक्षण सामग्री: {subject} - {topic}",
+        "summary": "यह पाठ {subject} में {topic} की मौलिक अवधारणाओं को कवर करता है। आप मुख्य सिद्धांत, व्यावहारिक अनुप्रयोग सीखेंगे और विषय वस्तु की व्यापक समझ विकसित करेंगे।",
+        "content_sections": {
+          "introduction": "{topic} पर इस व्यापक पाठ में आपका स्वागत है। यह विषय {subject} का एक महत्वपूर्ण हिस्सा है और आगे की शिक्षा के लिए एक मजबूत आधार बनाने में आपकी मदद करेगा।",
+          "key_concepts": "आप जो मुख्य अवधारणाएं सीखेंगे उनमें {topic} के बुनियादी सिद्धांत, इसके अनुप्रयोग, और यह {subject} के अन्य क्षेत्रों से कैसे संबंधित है, शामिल हैं।",
+          "practical_application": "आप {topic} की अपनी समझ को मजबूत करने के लिए व्यावहारिक गतिविधियों और वास्तविक दुनिया के उदाहरणों के साथ जुड़ेंगे।",
+          "assessment": "इंटरैक्टिव प्रश्नोत्तरी और चिंतन प्रश्नों के साथ अपने ज्ञान का परीक्षण करें जो आपकी समझ को गहरा करने के लिए डिज़ाइन किए गए हैं।"
+        },
+        "learning_objectives": {
+          "understand": "{topic} के मौलिक सिद्धांतों को समझना",
+          "apply": "व्यावहारिक स्थितियों में {topic} अवधारणाओं को लागू करना",
+          "analyze": "{topic} और {subject} के बीच संबंध का विश्लेषण करना",
+          "evaluate": "स्व-मूल्यांकन के माध्यम से अपनी समझ का मूल्यांकन करना"
+        }
+      },
+      "bn": {
+        "title": "শিক্ষণ সামগ্রী: {subject} - {topic}",
+        "summary": "এই পাঠটি {subject} এ {topic} এর মৌলিক ধারণাগুলি কভার করে। আপনি মূল নীতি, ব্যবহারিক প্রয়োগ শিখবেন এবং বিষয়বস্তুর একটি ব্যাপক বোঝাপড়া গড়ে তুলবেন।",
+        "content_sections": {
+          "introduction": "{topic} এর উপর এই ব্যাপক পাঠে আপনাকে স্বাগতম। এই বিষয়টি {subject} এর একটি গুরুত্বপূর্ণ অংশ এবং আরও শেখার জন্য একটি শক্তিশালী ভিত্তি তৈরি করতে আপনাকে সাহায্য করবে।",
+          "key_concepts": "আপনি যে মূল ধারণাগুলি শিখবেন তার মধ্যে রয়েছে {topic} এর মৌলিক নীতি, এর প্রয়োগ এবং এটি {subject} এর অন্যান্য ক্ষেত্রের সাথে কীভাবে সম্পর্কিত।",
+          "practical_application": "আপনি {topic} সম্পর্কে আপনার বোঝাপড়া শক্তিশালী করতে হাতে-কলমে কার্যকলাপ এবং বাস্তব জগতের উদাহরণের সাথে জড়িত হবেন।",
+          "assessment": "ইন্টারঅ্যাক্টিভ কুইজ এবং প্রতিফলন প্রশ্নের সাথে আপনার জ্ঞান পরীক্ষা করুন যা আপনার বোঝাপড়া গভীর করার জন্য ডিজাইন করা হয়েছে।"
+        },
+        "learning_objectives": {
+          "understand": "{topic} এর মৌলিক নীতিগুলি বোঝা",
+          "apply": "ব্যবহারিক পরিস্থিতিতে {topic} ধারণা প্রয়োগ করা",
+          "analyze": "{topic} এবং {subject} এর মধ্যে সম্পর্ক বিশ্লেষণ করা",
+          "evaluate": "স্ব-মূল্যায়নের মাধ্যমে আপনার বোঝাপড়া মূল্যায়ন করা"
+        }
+      }
+    }
+  }
+}

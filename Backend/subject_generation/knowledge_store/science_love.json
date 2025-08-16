@@ -1,0 +1,20 @@
+{
+  "subject": "science",
+  "topic": "love",
+  "title": "The Core of Love: Exploring Mathematics Through Ancient Wisdom",
+  "shloka": "Dharivadasi Samyog Vargam",
+  "translation": "Science of living in harmony",
+  "explanation": "In ancient Indian wisdom, love is the essence of interconnectedness and ethical conduct. It is not merely a feeling but an integral part of life's balance. Mathematics, with its focus on patterns and ratios, can serve as a tool to understand love by representing relationships and balancing elements through equations. This connection between mathematics and love reveals how scientific principles can guide us in appreciating the harmonious forces that define ethical behavior.",
+  "activity": "Have students create algebraic equations where solutions represent balanced relationships, emphasizing how mathematical harmony mirrors human ethical growth.",
+  "question": "How does mathematics serve as a mirror to understanding the ethical journey of love and ethics? Can we apply scientific principles to find balance in our personal relationships?",
+  "wikipedia_info": null,
+  "sources": [
+    "Ollama (deepseek-r1:1.5b)"
+  ],
+  "metadata": {
+    "timestamp": 1751968354.3605442,
+    "date_created": "2025-07-08T15:22:34.360545",
+    "version": "1.0",
+    "last_updated": "2025-07-08T15:22:34.360551"
+  }
+}

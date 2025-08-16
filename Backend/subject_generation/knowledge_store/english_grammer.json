@@ -1,0 +1,31 @@
+{
+  "subject": "english",
+  "topic": "grammer",
+  "title": "The title of the lesson",
+  "shloka": "Yojana veda nitya vaishanaa.",
+  "translation": "The path of the Vedic Wisdom through the Vedas and the paths of the Sages.",
+  "explanation": "Grammar is the foundation upon which ancient Indian wisdom is built. It encompasses understanding the structure of sentences, using conjunctions like 'and' or 'or', and grasping the significance of prepositions such as 'to' or 'at'. These principles are deeply rooted in Vedic philosophy, emphasizing the connection between aghar (words) and antyay (meaning). Grammar not only helps in expressing thoughts clearly but also encourages introspection and deeper understanding. In today's world, grammar is crucial for effective communication, critical thinking, and even problem-solving. Ancient wisdom underscores the importance of precise language, which has influenced modern teaching methods by fostering analytical and reflective skills.",
+  "activity": "Write a short paragraph explaining how you would apply the concepts of grammar in your daily life. Think about how understanding sentence structure can help you express ideas more clearly and effectively.",
+  "question": "How does the ancient Indian concept of grammar reflect today's emphasis on critical thinking and clear communication? Can you think of a situation where grammatical knowledge has directly impacted your ability to achieve personal or professional goals?",
+  "wikipedia_info": {
+    "title": "Kelsey Grammer",
+    "summary": "Allen Kelsey Grammer (born February 21, 1955) is an American actor and producer. He gained fame for his role as the psychiatrist Dr. Frasier Crane on the NBC sitcom Cheers (1984–1993) and its spin-off Frasier (1993–2004, and again from 2023 to 2024). With more than 20 years on-air, this is one of the longest-running roles played by a single live-action actor in primetime television history. He has received numerous accolades including a total of six Emmy Awards, three Golden Globe Awards, a Screen Actors Guild Award and a Tony Award.\nGrammer, having trained as an actor at Juilliard and the Old Globe Theatre, made his professional acting debut as Lennox in the 1981 Broadway revival of Macbeth. The following year, he portrayed Cassio acting opposite Christopher Plummer and James Earl Jones in Othello. In mid-1983, he acted alongside Mandy Patinkin in the original off-Broadway production of Stephen Sondheim's musical Sunday in the Park with George. He has since starred in the leading roles in productions of Sweeney Todd: The Demon Barber of Fleet Street, My Fair Lady, Big Fish, and Finding Neverland.\nOn film, he is known for his role as Dr. Hank McCoy / Beast in the superhero films X-Men: The Last Stand (2006), X-Men: Days of Future Past (2014) and The Marvels (2023). His other roles include Down Periscope (1996), The Pentagon Wars (1998), and Swing Vote (2008). He is also known for his voice roles in Anastasia (1997), Toy Story 2 (1999), and as Sideshow Bob in The Simpsons (1990–present). He took guest roles in the sitcoms 30 Rock (2010–2012), Unbreakable Kimmy Schmidt (2016), and Modern Family (2017). For his performance as the corrupt mayor in the Starz political series Boss (2011–2012), he received a Golden Globe Award for Best Actor – Television Series Drama.\nIn early 2010, Grammer returned to Broadway in the musical revival of La Cage aux Folles, where he received a nomination for the Tony Award for Best Leading Actor in a Musical. In mid-2016, Grammer won a Tony Award for Best Musical as producer of a musical revival of The Color Purple. In early 2019, he starred as Don Quixote in a production of Man of La Mancha at the London Coliseum. In late 2023, The Telegraph described Grammer as one of \"the finest actors\" of his generation. He was awarded a star on the Hollywood Walk of Fame on May 22, 2001.",
+    "url": "https://en.wikipedia.org/wiki/Kelsey_Grammer",
+    "related_articles": [
+      "Andy Grammer",
+      "English grammar",
+      "Gram",
+      "Camille Meyer"
+    ]
+  },
+  "sources": [
+    "Ollama (deepseek-r1:1.5b)"
+  ],
+  "wikipedia_summary": "Allen Kelsey Grammer (born February 21, 1955) is an American actor and producer. He gained fame for his role as the psychiatrist Dr. Frasier Crane on the NBC sitcom Cheers (1984–1993) and its spin-off Frasier (1993–2004, and again from 2023 to 2024). With more than 20 years on-air, this is one of the longest-running roles played by a single live-action actor in primetime television history. He has received numerous accolades including a total of six Emmy Awards, three Golden Globe Awards, a S...",
+  "metadata": {
+    "timestamp": 1751958816.1208315,
+    "date_created": "2025-07-08T12:43:36.120833",
+    "version": "1.0",
+    "last_updated": "2025-07-08T12:43:36.120840"
+  }
+}

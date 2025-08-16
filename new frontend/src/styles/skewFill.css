@@ -1,0 +1,252 @@
+/* Skew Fill Animation Styles - Redesigned for subtlety */
+/* Base styles */
+.skew-fill,
+.timeline-item > div,
+.agent-card {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+/* GSAP-enhanced skew elements - Much more subtle */
+.gsap-skew-element {
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transform: skewX(-20deg);
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(5px);
+}
+
+/* Timeline item custom skew effect */
+.timeline-item .gsap-skew-element,
+.insight-card .gsap-skew-element,
+.insight-panel .gsap-skew-element {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  width: 70%;
+  filter: blur(3px);
+}
+
+/* Custom colors for different timeline items based on agent type */
+.timeline-item.education .gsap-skew-element,
+.insight-panel.education .gsap-skew-element,
+.insight-card.education .gsap-skew-element {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(16, 185, 129, 0.08),
+    rgba(16, 185, 129, 0.04),
+    transparent
+  );
+}
+
+.timeline-item.financial .gsap-skew-element,
+.insight-panel.financial .gsap-skew-element,
+.insight-card.financial .gsap-skew-element {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(59, 130, 246, 0.08),
+    rgba(59, 130, 246, 0.04),
+    transparent
+  );
+}
+
+.timeline-item.wellness .gsap-skew-element,
+.insight-panel.wellness .gsap-skew-element,
+.insight-card.wellness .gsap-skew-element {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(249, 115, 22, 0.08),
+    rgba(249, 115, 22, 0.04),
+    transparent
+  );
+}
+
+/* Agent card custom colors - Much more subtle */
+.agent-card.education .gsap-skew-element {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(16, 185, 129, 0.1),
+    rgba(16, 185, 129, 0.05),
+    transparent
+  );
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.08);
+}
+
+.agent-card.financial .gsap-skew-element {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(59, 130, 246, 0.1),
+    rgba(59, 130, 246, 0.05),
+    transparent
+  );
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.08);
+}
+
+.agent-card.wellness .gsap-skew-element {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(249, 115, 22, 0.1),
+    rgba(249, 115, 22, 0.05),
+    transparent
+  );
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.08);
+}
+
+/* Additional hover effects */
+.agent-card:hover:not(.selected-agent) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item > div:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.insight-card {
+  margin-bottom: 1rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.insight-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.insight-panel {
+  padding-bottom: 2.5rem !important;
+  margin-bottom: 1.5rem !important;
+  min-height: 220px !important; /* Match height of agent cards */
+}
+
+/* Fix for confidence bar */
+.confidence-bar {
+  margin-bottom: 1rem !important;
+  position: relative;
+  z-index: 2;
+}
+
+.insight-panel:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Selected agent card styles */
+.agent-card.selected-agent .gsap-skew-element {
+  filter: blur(8px);
+  width: 80%;
+}
+
+.agent-card.selected-agent.education .gsap-skew-element {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(16, 185, 129, 0.1),
+    rgba(16, 185, 129, 0.05),
+    transparent
+  );
+}
+
+.agent-card.selected-agent.financial .gsap-skew-element {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(59, 130, 246, 0.1),
+    rgba(59, 130, 246, 0.05),
+    transparent
+  );
+}
+
+.agent-card.selected-agent.wellness .gsap-skew-element {
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(249, 115, 22, 0.1),
+    rgba(249, 115, 22, 0.05),
+    transparent
+  );
+}
+
+/* Fallback CSS-only animations (in case JS is disabled) */
+@media (prefers-reduced-motion: no-preference) {
+  .skew-fill::before,
+  .timeline-item > div::before,
+  .agent-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
+    transform: skewX(-20deg);
+    transition: 0.7s ease;
+    z-index: 0;
+    filter: blur(5px);
+  }
+
+  .skew-fill:hover::before,
+  .timeline-item > div:hover::before,
+  .agent-card:hover::before {
+    left: 120%;
+  }
+
+  /* Agent card custom colors - subtle versions */
+  .agent-card.education::before {
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(16, 185, 129, 0.05),
+      rgba(16, 185, 129, 0.02),
+      transparent
+    );
+  }
+
+  .agent-card.financial::before {
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(59, 130, 246, 0.05),
+      rgba(59, 130, 246, 0.02),
+      transparent
+    );
+  }
+
+  .agent-card.wellness::before {
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(249, 115, 22, 0.05),
+      rgba(249, 115, 22, 0.02),
+      transparent
+    );
+  }
+}
