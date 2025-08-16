@@ -3,6 +3,8 @@
 
 # Order matters for pip resolver
 torch>=2.5.0,<2.6.0
+pandas>=2.0.0
+
 
 # Web
 fastapi>=0.104.1,<0.115
