@@ -1,0 +1,31 @@
+# Minimal dependencies to run BHIV Core API on Render
+# (Excludes heavy forecasting stack: pandas/prophet/statsmodels/scikit-learn)
+
+# Order matters for pip resolver
+torch>=2.5.0,<2.6.0
+
+# Web
+fastapi>=0.104.1,<0.115
+uvicorn[standard]>=0.24.0,<0.36.0
+pydantic>=2.5.0,<2.13
+python-dotenv==1.0.0
+requests==2.31.0
+
+# LangChain & models
+langchain==0.1.0
+langchain-community==0.0.10
+langchain-huggingface==0.0.1
+sentence-transformers>=3.0.0
+transformers==4.36.0
+huggingface-hub>=0.20.0
+
+# Vectors
+faiss-cpu>=1.7.4,<1.8
+
+# Google Gemini client (optional; code has fallback)
+google-generativeai==0.3.2
+
+# Utilities
+numpy==1.24.3
+typing-extensions==4.8.0
+
