@@ -1,0 +1,8 @@
+# Forecasting stack (not needed for API runtime on Render)
+# Install locally or in a separate worker if required
+
+pandas==2.1.4
+prophet>=1.1.4
+statsmodels>=0.14.0
+scikit-learn>=1.3.0
+
