@@ -7,17 +7,33 @@ import uuid
 import os
 from pathlib import Path
 
+# Get port from environment variable (Render sets this)
+PORT = int(os.getenv("PORT", 8007))
+ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
+
 app = FastAPI(title="Gurukul TTS Service", description="Text-to-Speech service for lesson content")
 
-# Add CORS middleware to allow frontend connections
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins for development
-    allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS"],
-    allow_headers=["*"],
-    expose_headers=["*"]
-)
+# Add CORS middleware with production-appropriate settings
+if ENVIRONMENT == "production":
+    # More restrictive CORS for production
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],  # Update with your frontend domains
+        allow_credentials=True,
+        allow_methods=["GET", "POST", "OPTIONS"],
+        allow_headers=["*"],
+        expose_headers=["*"]
+    )
+else:
+    # Development CORS settings
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],  # Allow all origins for development
+        allow_credentials=True,
+        allow_methods=["GET", "POST", "OPTIONS"],
+        allow_headers=["*"],
+        expose_headers=["*"]
+    )
 
 OUTPUT_DIR = "tts_outputs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -230,13 +246,14 @@ async def health_check():
 if __name__ == "__main__":
     import uvicorn
 
-    print("Starting Gurukul TTS Service...")
+    print(f"Starting Gurukul TTS Service on port {PORT}...")
+    print(f"Environment: {ENVIRONMENT}")
     print(f"Output directory: {os.path.abspath(OUTPUT_DIR)}")
 
     # Run on all interfaces so it can be accessed from other machines
     uvicorn.run(
         app,
         host="0.0.0.0",  # Listen on all interfaces
-        port=8007,       # Use port 8007 for TTS service
+        port=PORT,       # Use port from environment variable
         log_level="info"
     )

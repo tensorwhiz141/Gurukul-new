@@ -1,0 +1,13 @@
+# Production requirements for tts_service
+# Optimized for Render deployment
+
+fastapi==0.104.1
+pyttsx3==2.90
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+starlette==0.27.0
+typing-extensions==4.8.0
+
+# Additional dependencies for production
+gunicorn==21.2.0
+httpx==0.25.0

@@ -1,0 +1,47 @@
+# Dockerignore file for TTS Service
+# Exclude unnecessary files from Docker build context
+
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation (exclude from build)
+*.md
+!DEPLOY_TO_RENDER.md
+
+# Test files
+test_*
+*_test.py
+*_test.html
+
+# Output files (will be created in container)
+tts_outputs/*.wav
+tts_outputs/*.mp3
+
+# Logs
+*.log

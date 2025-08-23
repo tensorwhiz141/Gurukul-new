@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: gurukul-tts-service
+    env: docker
+    region: oregon # or singapore, frankfurt, ohio - choose closest to your users
+    plan: starter # free tier - upgrade to standard if needed
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: PORT
+        value: 8007
+      - key: PYTHONUNBUFFERED
+        value: 1
+      - key: ENVIRONMENT
+        value: production
+    healthCheckPath: /api/health
+    disk:
+      name: tts-storage
+      mountPath: /app/tts_outputs
+      sizeGB: 1 # 1GB storage for audio files
+    scaling:
+      minInstances: 1
+      maxInstances: 3
+    autoDeploy: true
